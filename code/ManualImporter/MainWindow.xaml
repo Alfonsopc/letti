@@ -1,0 +1,23 @@
+﻿<Window x:Class="ManualImporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManualImporter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Width="160" Height="35" Content="Transparencia" Click="Transparencia_Click"/>
+        <Button Grid.Column="1" Width="160" Height="35" Content="Compranet" Click="Compranet_Click"/>
+        <Button Grid.Column="0" Grid.Row="1" Width="160" Height="35" Content="Transparencia Setup" Click="Transparencia_Setup_Click"/>
+
+    </Grid>
+</Window>

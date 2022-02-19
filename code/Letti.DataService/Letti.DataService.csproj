@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Letti.Data\Letti.Data.csproj" />
+    <ProjectReference Include="..\Letti.Repositories\Letti.Repositories.csproj" />
+    <ProjectReference Include="..\Letti.Services\Letti.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

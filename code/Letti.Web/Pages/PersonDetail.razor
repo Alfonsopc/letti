@@ -1,0 +1,240 @@
+﻿@page "/persondetail/{personId}"
+@inherits PersonDetailBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="persons">Personas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Person.FirstName</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4>@Person.FirstName</h4>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="form-group row">
+                    <label class="col-5 col-sm-3 col-md-3 col-lg-4 pr-0 col-form-label font-weight-bold">Nombre </label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Person.FirstName</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="form-group row">
+                    <label class="col-5 col-sm-3 col-md-3 col-lg-4 pr-0 col-form-label font-weight-bold">Apellido Paterno</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Person.LastName</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="form-group row">
+                    <label class="col-5 col-sm-3 col-md-3 col-lg-4 pr-0 col-form-label font-weight-bold">Apellido Materno</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Person.SecondLastName</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="form-group row">
+                    <label class="col-5 col-sm-3 col-md-3 col-lg-4 pr-0 col-form-label font-weight-bold">RFC</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Person.RFC</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="form-group row">
+                    <label class="col-5 col-sm-3 col-md-3 col-lg-4 pr-0 col-form-label font-weight-bold">CURP</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Person.CURP</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="mt-4">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <AuthorizeView>
+            <Authorized>
+                <a onclick="tabChange(this)" class="nav-item nav-link active" id="nav-relationship-tab" data-toggle="tab" data-target="nav-relationship" role="tab" aria-controls="nav-relationship" aria-selected="true">Relaciones personales</a>
+            </Authorized>
+        </AuthorizeView>
+        <a onclick="tabChange(this)" class="nav-item nav-link" id="nav-companies-tab" data-toggle="tab" data-target="nav-companies" role="tab" aria-controls="nav-companies" aria-selected="false">Compañías</a>
+        <a onclick="tabChange(this)" class="nav-item nav-link" id="nav-dependencies-tab" data-toggle="tab" data-target="nav-dependencies" role="tab" aria-controls="nav-dependencies" aria-selected="false">Dependencias</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <AuthorizeView>
+        <Authorized>
+            <div class="tab-pane fade show active" id="nav-relationship" role="tabpanel" aria-labelledby="nav-relationship-tab">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="col-12 form-inline">
+                                <h3 class="m-0">Relaciones Personales</h3>
+
+                                <div class="section-commands ml-4">
+                                    <button @onclick="QuickAddRelationship" class="btn btn-purple btn-sm table-btn section-add-btn font-weight-bold ml-1">Agregar relación</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="d-flex">
+                                    <th class="col-5">Nombre</th>
+                                    <th class="col-5">Relación</th>
+                                    <th class="col-1"></th>
+                                    <th class="col-1"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var relationship in PersonalRelationships)
+                                    {
+                                <tr class="d-flex">
+                                    <td class="col-5">@relationship.Name</td>
+                                    <td class="col-5">@relationship.Relationship</td>
+
+                                    <td class="col-1 text-center">
+                                        <a @onclick="()=>QuickEditRelationship(relationship)">
+                                            <span class="fa fa-pencil-alt text-secondary"></span>
+                                        </a>
+                                    </td>
+                                    <td class="col-1 text-center">
+                                        <a @onclick="()=>DeleteRelationship(relationship)">
+                                            <span class="fa fa-trash text-secondary"></span>
+                                        </a>
+                                    </td>
+
+                                    <td class="col-1" />
+                                    <td class="col-1" />
+
+
+
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                        <Letti.Web.Components.AddRelationshipDialog @ref="AddRelationshipDialog" MainPersonId="@Person.Id" CloseEventCallback="@AddRelationshipDialog_OnDialogClose"></Letti.Web.Components.AddRelationshipDialog>
+                        <Letti.Web.Components.DeletePersonalRelationship @ref="DeletePersonalRelationshipDialog" MainPersonId="@Person.Id" CloseEventCallback="@AddRelationshipDialog_OnDialogClose"></Letti.Web.Components.DeletePersonalRelationship>
+                    </div>
+                </div>
+            </div>
+        </Authorized>
+    </AuthorizeView>
+    <div class="tab-pane fade" id="nav-companies" role="tabpanel" aria-labelledby="nav-companies-tab">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3>Compañías</h3>
+
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="d-flex">
+                                    <th class="col-3">Empresa</th>
+                                    <th class="col-3">Relación</th>
+                                    <th class="col-3">Inicio</th>
+                                    <th class="col-3">Fin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var contractorRelationship in ContractorRelationships)
+                                {
+                                <tr class="d-flex">
+                                    <td class="col-3">@contractorRelationship.Company.ComercialName</td>
+                                    <td class="col-3">@contractorRelationship.ContractorRelationshipType.RelationshipType</td>
+                                    @if (contractorRelationship.StartDate.HasValue)
+                                        {
+                                    <td class="col-3">@contractorRelationship.StartDate.Value.ToShortDateString()</td>
+                                    }
+                                        else
+                                        {
+                                    <td class="col-3"></td>
+                                    }
+                                    @if (contractorRelationship.EndDate.HasValue)
+                                        {
+                                    <td class="col-3">@contractorRelationship.EndDate.Value.ToShortDateString()</td>
+                                    }
+                                        else
+                                        {
+                                    <td class="col-3"></td>
+                                    }
+
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-dependencies" role="tabpanel" aria-labelledby="nav-dependencies-tab">
+        <div class="card mt-4 mb-4">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-12 form-inline">
+                        <h3 class="m-0">Dependencias</h3>
+                        <AuthorizeView>
+                            <Authorized>
+                                <div class="section-commands ml-4">
+                                    <button @onclick="QuickAddPublicJob" class="btn btn-purple btn-sm table-btn section-add-btn font-weight-bold ml-1">Agregar dependencia</button>
+                                </div>
+                            </Authorized>
+                        </AuthorizeView>
+                    </div>
+                    <Letti.Web.Components.AddPublicJobDialog @ref="AddPublicJobDialog" MainPersonId="@Person.Id" CloseEventCallback="@AddPublicJogDialog_OnDialogClose"></Letti.Web.Components.AddPublicJobDialog>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr class="d-flex">
+                            <th class="col-3">Dependencia</th>
+                            <th class="col-3">Puesto</th>
+                            <th class="col-3">Inicio</th>
+                            <th class="col-3">Fin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var organizationRelationship in OrganizationRelationships)
+                        {
+                        <tr class="d-flex">
+                            <td class="col-3">@organizationRelationship.Organization.OrganizationName</td>
+                            <td class="col-3">@organizationRelationship.Job</td>
+                            @if (organizationRelationship.StartDate.HasValue)
+                                {
+                            <td class="col-3">@organizationRelationship.StartDate.Value.ToShortDateString()</td>
+                            }
+                                else
+                                {
+                            <td class="col-3"></td>
+                            }
+                            @if (organizationRelationship.EndDate.HasValue)
+                                {
+                            <td class="col-3">@organizationRelationship.EndDate.Value.ToShortDateString()</td>
+                            }
+                                else
+                                {
+                            <td class="col-3"></td>
+                            }
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

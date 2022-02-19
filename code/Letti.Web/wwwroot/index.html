@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Letti.Web</title>
+    <!--<base href="/letti/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />-->
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+
+    
+    <script src="fontawesome/js/fontawesome.js"></script>
+</head>
+
+<body>
+    <app>
+        <div class="spinner"></div>
+    </app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+
+    <script>
+        function tabChange(e) {
+            var tabClass = e.className; // Elemento seleccionado
+            var tabTarget = e.dataset.target; // Tab target del elemento seleccionado
+            var tabsContainer = e.parentElement; // Contenedor de los tabs links
+            var tabList = tabsContainer.getElementsByClassName("nav-item"); // Lista de tabs links
+
+            // Quita la clase de active
+            for (let i = 0; i < tabList.length; i++) {
+                tabList[i].classList.remove("active");
+            }
+
+            // Obtiene el contenedor de los tab container
+            var tabContentContainer = document.getElementById("nav-tabContent");
+
+            // Obtiene listado de los panels
+            var tabContainerList = tabContentContainer.getElementsByClassName("tab-pane");
+
+            // Quita las clases show y active de los panels
+            for (let i = 0; i < tabContainerList.length; i++) {
+                tabContainerList[i].classList.remove("show");
+                tabContainerList[i].classList.remove("active");                
+            }
+
+            // Obtiene el panel que se va a mostrar
+            var tabContent = document.getElementById(tabTarget);
+
+            // Activa el tab seleccionado
+            e.classList.add("active");
+
+            // Muestra el panel
+            tabContent.classList.add("show");
+            tabContent.classList.add("active");            
+        }
+    </script>
+</body>
+
+</html>

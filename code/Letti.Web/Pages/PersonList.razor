@@ -1,0 +1,79 @@
+﻿@page "/persons"
+@inherits PersonListBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Personas</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12 form-inline">
+        <h3 class="m-0">Personas de Interés</h3>
+
+        <AuthorizeView>
+            <Authorized>
+                <div class="ml-4">
+                    <a href="@($"personedit")" class="btn btn-purple btn-sm font-weight-bold ml-2 ml-lg-1">
+                        Agregar persona
+                    </a>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+</div>
+
+@if (Persons == null)
+{
+    @*<p><em>Cargando...</em></p>*@
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="inner-addon right-addon">
+        <span class="fa fa-search"></span>
+        <input @bind-value="SearchText"
+               @bind-value:event="oninput" @onkeyup="KeyPressed" placeholder="Búsqueda por nombre"
+               class="form-control form-control-border" />
+    </div>
+
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr class="d-flex">
+                <th class="col-4 col-lg-5">Nombre</th>
+                <th class="col-3">Apellido Paterno</th>
+                <th class="col-3">Apellido Materno</th>
+                <th class="col-2 col-lg-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Letti.Model.PersonOfInterest person in Persons)
+            {
+                <tr class="d-flex">
+                    <td class="col-4 col-lg-5">@person.FirstName</td>
+                    <td class="col-3">@person.LastName</td>
+                    <td class="col-3">@person.SecondLastName</td>
+                    <td class="col-2 col-lg-1">
+                        <a href="@($"persondetail/{person.Id.ToString()}")">
+                            <span class="fa fa-eye text-secondary"></span>
+                        </a>
+                        <AuthorizeView>
+                            <Authorized>
+                                <a href="@($"personedit/{person.Id.ToString()}")" class="float-right">
+                                    <span class="fa fa-pencil-alt text-secondary"></span>
+                                </a>
+                            </Authorized>
+                        </AuthorizeView>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+}
+

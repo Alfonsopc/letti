@@ -1,0 +1,85 @@
+﻿@page "/contractoredit"
+@page "/contractoredit/{ContractorId}"
+@inherits ContractorEditBase
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="contractors">Proveedores</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+</div>
+
+<section>
+    @if (!Saved)
+    {
+        <div class="alert @StatusClass">@Message</div>
+
+        <div class="row mb-4">            
+            <div class="col-12">                
+                <div class="card">
+                    <div class="card-body">
+                        <EditForm Model="@Contractor" OnValidSubmit="@HandleValidSubmit">
+                            <h3 class="page-title">@Contractor.ComercialName</h3>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Nombre Comercial: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.ComercialName" class="form-control" placeholder="Nombre comercial"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Razón Social: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.OfficialName" class="form-control" placeholder="Razón social"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">RFC: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.TaxId" class="form-control" placeholder="RFC"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Dirección: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.Address" class="form-control" placeholder="Dirección"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Dirección Fiscal: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.FiscalAddress" class="form-control" placeholder="Dirección Fiscal"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Ciudad: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.City" class="form-control" placeholder="Ciudad"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Estado: </label>
+                                        <InputText id="lastName" @bind-Value="@Contractor.State" class="form-control" placeholder="Estado"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3 offset-6 offset-lg-0 align-self-center">
+                                    <button type="submit" class="btn btn-purple edit-btn float-right font-weight-bold btn-block mt-3">Guardar Proveedor</button>
+                                </div>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    }
+    else
+    {
+        <div class="alert @StatusClass">@Message</div>
+        <a class="btn btn-secondary text-white font-weight-bold" @onclick="@NavigateToOverview">Regresar a la lista</a>
+
+    }
+</section>

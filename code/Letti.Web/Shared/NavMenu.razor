@@ -1,0 +1,82 @@
+﻿@using Letti.Web.Contracts
+@inject IUserService userService
+@inject NavigationManager navigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="top-row pl-3 pt-1 navbar navbar-dark">
+    <img src="Letti-logo-blanco.svg" alt="logo" height="50" />
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="fa fa-home mr-2" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="organizations">
+                <span class="fa fa-building mr-2" aria-hidden="true"></span> Dependencias
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="contractors">
+                <span class="fa fa-users mr-2" aria-hidden="true"></span> Proveedores
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="persons">
+                <span class="fa fa-user mr-2" aria-hidden="true"></span> Personas
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="faq">
+                <span class="fa fa-question mr-2" aria-hidden="true"></span> Preguntas Frecuentes
+            </NavLink>
+        </li>
+
+    </ul>
+    <div class="login w-100">
+        <AuthorizeView>
+            <Authorized>
+                <li class="px-3 logout-item form-inline ml-3">
+                    <NavLink href="#" @onclick="Logout">
+                        <span class="fa fa-sign-out-alt mr-2" aria-hidden="true"></span> Logout
+                    </NavLink>
+                </li>
+            </Authorized>
+            <NotAuthorized>                
+                <li class="px-3 login-item form-inline">
+                    ¿Tienes cuenta?
+                    <NavLink href="login">
+                        Ingresa aquí
+                    </NavLink>
+                </li>
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+    <div class="about ml-2">
+        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About 3.23</a>
+    </div>
+</div>
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task Logout()
+    {
+        await userService.Logout();
+        navigationManager.NavigateTo("/letti");
+    }
+}

@@ -1,0 +1,60 @@
+﻿@inherits AddPublicJobDialogBase
+
+@if (ShowDialog)
+{
+    <div class="modal fade show d-block" id="exampleModal" tabindex="-1" role="dialog" style="overflow-y: auto;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titleLabel">Agregar Relación</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @onclick="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <EditForm Model="@PersonOrganizationRelationShip" OnValidSubmit="@HandleValidSubmit">
+
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <div class="form-group">
+                            <label for="organization" class="font-weight-bold">Dependencia: </label>
+                            <InputSelect id="relationship" class="form-control" @bind-Value="@SelectedOrganizationId">
+                                @foreach (var organization in Organizations)
+                                    {
+                                    <option value="@organization.Id.ToString()">@organization.OrganizationName</option>
+                                    }
+                            </InputSelect>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="relationship" class="font-weight-bold">Relación: </label>
+                            <InputSelect id="relationship" class="form-control" @bind-Value="@SelectedRelationshipId">
+                                @foreach (var relationship in OrganizationRelationships)
+                                    {
+                                    <option value="@relationship.Id.ToString()">@relationship.Name</option>
+                                    }
+                            </InputSelect>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobtitle" class="font-weight-bold">Puesto: </label>
+                            <InputText id="jobtitle" class="form-control" @bind-Value="@PersonOrganizationRelationShip.Job" placeholder="Puesto"></InputText>
+                        </div>
+
+                        <hr />
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-purple mr-3 font-weight-bold">Guardar Relación</button>
+                                <a class="btn btn-secondary text-white font-weight-bold" @onclick="@Close">Cerrar</a>
+                            </div>
+                        </div>
+                    </EditForm>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

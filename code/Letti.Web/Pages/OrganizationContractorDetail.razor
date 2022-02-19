@@ -1,0 +1,57 @@
+﻿@page "/organizationcontractordetail/{organizationId}"
+@inherits OrganizationContractorDetailBase
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="contractors">Proveedores</a></li>
+            <li class="breadcrumb-item"><a href="contractors">Detalle proveedor</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contratos</li>
+        </ol>
+    </nav>
+</div>
+
+<div>
+    <h4>Contratos</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr class="d-flex">
+                <th class="col-2">Contrato</th>
+                <th class="col-3">Concepto</th>
+                <th class="col-2">Tipo</th>
+                <th class="col-2">Valor Total</th>
+                <th class="col-1">Moneda</th>
+                <th class="col-1">Inicio</th>
+                <th class="col-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contract in Contracts)
+            {
+            <tr class="d-flex">
+                <td class="col-2">@contract.Number</td>
+                <td class="col-3">@contract.Concept</td>
+                <td class="col-2">@contract.ContractType</td>
+                <td class="col-2">@string.Format("{0:C}", contract.Value)</td>
+                <td class="col-1">@contract.Currency</td>
+                @if(contract.StartDate.HasValue)
+                {
+                     <td class="col-1">@contract.StartDate.Value.ToShortDateString()</td>
+                }
+                else
+                {
+                    <td class="col-1"></td>
+                }
+                <td class="col-1 text-center">
+                    <a @onclick="()=>ViewContract(contract)">
+                        <span class="fa fa-info-circle text-secondary"></span>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+ </div>   
+     <Letti.Web.Components.ContractView @ref="ContractView" CloseEventCallback="@OnDialogClose"></Letti.Web.Components.ContractView>

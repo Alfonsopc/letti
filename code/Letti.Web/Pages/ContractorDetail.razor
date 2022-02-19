@@ -1,0 +1,83 @@
+﻿@page "/contractordetail/{contractorId}"
+@inherits ContractorDetailBase
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="contractors">Proveedores</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detalle proveedor</li>
+        </ol>
+    </nav>
+</div>
+
+<h3>@Contractor.ComercialName</h3>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">Nombre Fiscal:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.OfficialName</label>
+            </div>
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">Dirección:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.Address</label>
+            </div>
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">Dirección Fiscal:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.FiscalAddress</label>
+            </div>
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">RFC:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.TaxId</label>
+            </div>
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">Ciudad:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.City</label>
+            </div>
+            <div class="col-4 col-lg-2 pr-0">
+                <label class="col-form-label font-weight-bold">Estado:</label>
+            </div>
+            <div class="col-8 col-lg-4">
+                <label type="text" class="form-control-plaintext">@Contractor.State</label>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr class="d-flex">
+            <th class="col-5 col-lg-6">Dependencia</th>
+            <th class="col-3 col-lg-2">Contratos</th>
+            <th class="col-3">Valor Total</th>
+            <th class="col-1"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contract in ContractsViews)
+        {
+            <tr class="d-flex">
+                <td class="col-5 col-lg-6">@contract.Organization</td>
+                <td class="col-3 col-lg-2">@contract.Contracts</td>
+                <td class="col-3">@string.Format("{0:C}", contract.Value)</td>
+                <td class="col-1">
+                    <a href="@($"organizationcontractordetail/{contract.OrganizationId.ToString()}_{ContractorId}")" class="text-center">
+                        <span class="fa fa-info-circle text-secondary"></span>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

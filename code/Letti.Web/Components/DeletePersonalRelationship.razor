@@ -1,0 +1,53 @@
+﻿@inherits DeletePersonalRelationshipBase
+
+@if (ShowDialog)
+{
+    <div class="modal fade show d-block" id="exampleModal" tabindex="-1" role="dialog" style="overflow-y: auto;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titleLabel">Eliminar Relación</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @onclick="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmit">
+
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="name" class="font-weight-bold">Nombre: </label>
+                            <InputText id="name" class="form-control" @bind-Value="@Person.FirstName" placeholder="Nombre"></InputText>
+                            <ValidationMessage For="@(() => Person.FirstName)" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last_name" class="font-weight-bold">Apellido Paterno: </label>
+                            <InputText id="last_name" class="form-control" @bind-Value="@Person.LastName" placeholder="Apellido"></InputText>
+                        </div>
+                        <div class="form-group">
+                            <label for="second_last_name" class="font-weight-bold">Apellido Materno: </label>
+                            <InputText id="second_last_name" class="form-control" @bind-Value="@Person.SecondLastName" placeholder="Apellido Materno"></InputText>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship" class="font-weight-bold">Relación: </label>
+                            <InputText id="relationship" class="form-control" @bind-Value="@SelectedRelationship" placeholder="Apellido Materno"></InputText>
+                        </div>
+
+                        <hr />
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary mr-3 font-weight-bold">Borrar Relación</button>
+                                <a class="btn btn-secondary text-white font-weight-bold" @onclick="@Close">Cerrar</a>
+                            </div>
+                        </div>
+                    </EditForm>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

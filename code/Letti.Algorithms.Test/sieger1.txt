@@ -1,0 +1,491 @@
+<!--?xml version="1.0" encoding="UTF-8" ?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/theme.css.xhtml?ln=primefaces-sesiger"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/primefaces.css.xhtml?ln=primefaces"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/tooltip/tooltip.css.xhtml?ln=primefaces-extensions&amp;v=0.6.2"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/css/tooltipster.css.xhtml"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/css/siger.css.xhtml"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/css/siger2.css.xhtml"><link type="text/css" rel="stylesheet" href="/siger2/javax.faces.resource/css/menu.css.xhtml"><script type="text/javascript" async="" defer="" src="//analytics.economia.gob.mx/piwik.js"></script><script type="text/javascript" src="/siger2/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/siger2/javax.faces.resource/primefaces.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/siger2/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/siger2/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml?ln=primefaces"></script><script type="text/javascript" src="/siger2/javax.faces.resource/primefaces-extensions.js.xhtml?ln=primefaces-extensions&amp;v=0.6.2"></script><script type="text/javascript" src="/siger2/javax.faces.resource/tooltip/tooltip.js.xhtml?ln=primefaces-extensions&amp;v=0.6.2"></script><script type="text/javascript" src="/siger2/javax.faces.resource/jsf.js.xhtml?ln=javax.faces"></script><script type="text/javascript" src="/siger2/javax.faces.resource/inputnumber/inputnumber.js.xhtml?ln=primefaces-extensions&amp;v=0.6.2"></script><!--[if lt IE 9]><script type="text/javascript" src="/siger2/javax.faces.resource/js/html5shiv.js.xhtml"></script><![endif]--><script type="text/javascript" src="/siger2/javax.faces.resource/js/jquery.validate.min.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/jquery.tooltipster.min.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/calendar_es.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/jquery.blockUI.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/spinner.v2.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/avoidback.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/jquery.enter.manager.js.xhtml"></script><script type="text/javascript" src="/siger2/javax.faces.resource/jquery.siger.util.v1.js.xhtml?ln=js"></script><script type="text/javascript" src="/siger2/javax.faces.resource/js/pagos/jquery.pago.portal.v3.js.xhtml"></script><script type="text/javascript" src="RES_NOT_FOUND"></script>
+        <!-- RUM Header -->
+        <script> 
+        /** eG RUM Javasript Loader */
+        (function(w,d){
+                        w['egrum-start_time'] = new Date().getTime();
+                        w['Site_Name'] = 'a2d55b99-5956-4138-a92c-4cf10e9959a2-1603168611281'; 
+                        w['beacon-url'] = 'https://rum.economia.gob.mx:7080';
+                        if(!w['egrum-config']) w['egrum-config'] = {}; (function (config) {config.capture = { jsError:true, resourceDetails:true, ajax:true, ajaxCorrelation:false, overwriteBtmUName:false, excludeURLPattern:'none', ajaxExcludeURLPattern:'none', includeURLPattern:'*'};})(w['egrum-config']);
+                        var head = d.getElementsByTagName('head').item(0);
+                        var body = d.getElementsByTagName('body').item(0);
+                        var html = d.getElementsByTagName('html').item(0);
+                        var script = d.createElement('script');
+                        script.setAttribute('type', 'text/javascript');
+                        script.setAttribute('async', '');
+                        script.setAttribute('src', 'https://rum.economia.gob.mx:7080/rumcollector/egrum.js');
+                        if(head){
+                                        head.appendChild(script);
+                        }else if(body){
+                                        body.appendChild(script);
+                        } else if(html){
+                                        html.appendChild(script);
+                        }
+        })(window, document);
+        /** eG RUM Javasript Loader */
+  
+ 
+        </script><script type="text/javascript" async="" src="https://rum.economia.gob.mx:7080/rumcollector/egrum.js"></script>
+		<!-- Piwik -->
+		<script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//analytics.economia.gob.mx/";
+                _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                _paq.push(['setSiteId', 9]); //siger
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js';
+                try{
+                    if(s != null){
+                        if(typeof s!== "undefined") {
+                            s.parentNode.insertBefore(g, s);
+                        }
+                    }
+				}catch (e) {
+                    console.log("Error en la variable s: ");
+					console.log(e);
+                }
+            })();
+		</script></head><body id="cuerpoPrincipal" style=""> <!-- onunload ='isLogout()' SIGER2_0 V.1.2 -->
+<form id="j_idt30" name="j_idt30" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt30" value="j_idt30">
+<script type="text/javascript">rc = function() {PrimeFaces.ab({source:'j_idt30:j_idt32',formId:'j_idt30',params:arguments[0]});}</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>
+<form id="growlForm" name="growlForm" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="growlForm" value="growlForm">
+<span id="growlForm:growlExito"></span><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>        
+		<div id="art-page-background-glare-wrapper">
+		    <div id="art-page-background-glare"></div>
+		</div>
+		<div id="page">		
+			<div id="art-main">
+			    <div class="cleared reset-box"></div>
+			    <div class="art-box art-sheet">
+			        <div class="art-box-body art-sheet-body">
+			        <header id="site-header">
+				
+			<div class="top">
+		        <h1 id="site-logo"><a href="#">Registro Pblico de Comercio - SIGER 2.0</a></h1>
+				
+		        <div id="site-sec-nav" class="col3 m">
+		            <ul>
+<form id="formMenu" name="formMenu" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formMenu" value="formMenu">
+
+			                <li><a href="#" onclick="mojarra.jsfcljs(document.getElementById('formMenu'),{'formMenu:j_idt54':'formMenu:j_idt54'},'');return false">Inicio</a></li>
+			                 <!-- CUF01  -->               
+                       		<li><a href="#" onclick="mojarra.jsfcljs(document.getElementById('formMenu'),{'formMenu:j_idt56':'formMenu:j_idt56'},'');return false">Ayuda</a>
+                       		</li> 
+			                <li><a href="#">Contacto</a></li>
+			                 <li><a href="#" onclick="mojarra.jsfcljs(document.getElementById('formMenu'),{'formMenu:j_idt58':'formMenu:j_idt58'},'');return false">Cerrar Sesión</a> </li><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>
+		            </ul>
+	            <div id="indicador-usuario">
+<form id="form" name="form" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="form" value="form">
+ 	
+						<img src="/siger2/javax.faces.resource/img/icono_Usuario.png.xhtml"><a href="#" onclick="jsf.util.chain(this,event,'mostrarSpinner();','mojarra.jsfcljs(document.getElementById(\'form\'),{\'form:j_idt62\':\'form:j_idt62\'},\'\')');return false"><label>Tania Elizabeth Rosales Rocha</label></a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>	      
+				</div>
+		        </div>		        
+		    </div>
+<form id="j_idt65" name="j_idt65" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt65" value="j_idt65">
+<script type="text/javascript">rc2 = function() {PrimeFaces.ab({source:'j_idt65:rc2',formId:'j_idt65',update:'j_idt65:contRegresivo',params:arguments[0]});}</script><script type="text/javascript">actualizarSesion = function() {PrimeFaces.ab({source:'j_idt65:j_idt66',formId:'j_idt65',params:arguments[0]});}</script><script type="text/javascript">cerrarSesion = function() {PrimeFaces.ab({source:'j_idt65:cerrarSesion',formId:'j_idt65',params:arguments[0]});}</script><span id="j_idt65:messages"></span><script id="j_idt65:j_idt67_s" type="text/javascript">$(function(){PrimeFaces.cw('Poll','poll',{id:'j_idt65:j_idt67',frequency:1,autoStart:false,fn:function(){PrimeFaces.ab({source:'j_idt65:j_idt67',formId:'j_idt65',update:'j_idt65:contRegresivo'});}});});</script><script id="j_idt65:j_idt68_s" type="text/javascript">$(function(){PrimeFaces.cw('Poll','poll2',{id:'j_idt65:j_idt68',frequency:31,autoStart:false,fn:function(){PrimeFaces.ab({source:'j_idt65:j_idt68',formId:'j_idt65'});}});});</script>
+    		
+    		<!-- se muestra la ventana con el contador despues de 59 minutos con 30 segundos --><div id="j_idt65:confirmDialog" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable ui-resizable" role="dialog" aria-labelledby="j_idt65:confirmDialog_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt65:confirmDialog_title" class="ui-dialog-title">¡Se cerrara la sesion en...!</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><span id="j_idt65:j_idt71"><span id="j_idt65:contRegresivo" style="font-size:18px">Contador regresivo: 30</span></span></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div></div>
+			
+            <nav id="site-nav">
+            <div id="nav-bar">
+                <ul>
+                        <li id="Solicitudes"><a href="javascript:void(0)" onclick=" $('li#Solicitudes .submenu').toggle();">Solicitudes</a>
+                            <div class="submenu">
+                                <ul>
+										<li><a href="#" onclick="jsf.util.chain(this,event,'mostrarSpinner();','mojarra.jsfcljs(document.getElementById(\'j_idt65\'),{\'j_idt65:j_idt75\':\'j_idt65:j_idt75\'},\'\')');return false">crear solicitud de certificación</a></li>
+                                </ul>
+                            </div></li>
+                        <li id="Consultas"><a href="javascript:void(0)" onclick=" $('li#Consultas .submenu').toggle();">Consultas y
+                                Estadísticas</a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt65'),{'j_idt65:j_idt80':'j_idt65:j_idt80'},'');return false">Consulta de Estatus de Solicitudes</a></li>
+                                    <!-- CUO01 --> 
+                                    <li><a href="#" onclick="jsf.util.chain(this,event,'mostrarSpinner();','mojarra.jsfcljs(document.getElementById(\'j_idt65\'),{\'j_idt65:j_idt84\':\'j_idt65:j_idt84\'},\'\')');return false">Consulta Pública</a></li>
+                                    <!-- CUO01-->
+                                    <!-- CUH01 -->
+                                    <!-- CUH01 -->
+                                    <li><a href="#" onclick="jsf.util.chain(this,event,'mostrarSpinner();','mojarra.jsfcljs(document.getElementById(\'j_idt65\'),{\'j_idt65:j_idt89\':\'j_idt65:j_idt89\'},\'\')');return false">Boletín de Resultados de Solicitud</a>
+                                    </li>
+                                    <li><a href="#" onclick="jsf.util.chain(this,event,'mostrarSpinner();','mojarra.jsfcljs(document.getElementById(\'j_idt65\'),{\'j_idt65:j_idt92\':\'j_idt65:j_idt92\'},\'\')');return false">Validar Documento</a></li>
+                                </ul>
+                            </div></li>
+                </ul>
+            </div>
+            <!-- #nav-bar --> </nav>
+            <!-- #site-nav --><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>
+        <script language="JavaScript" type="text/javascript">
+    
+	    	window.addEventListener('load',Temporizador);
+	    	
+	    	function Temporizador(e)
+	    	{
+	    		console.log('antes del temporizador');
+	    		actualizarSesion();
+	    		setTimeout(function(e)
+	    		{
+	    			console.log('entro al temporizador');
+	    			Temporizador(e);
+	    		},60000);
+	    	};
+	    	
+    	</script>
+    	<!--script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;
+        
+			window.addEventListener('load',cargaEvento);
+			
+			var myEvent = window.attachEvent || window.addEventListener;
+			var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compitable
+			
+			var msj = true;
+			var cS = false;
+			
+			function cargaEvento(event)
+			{
+				cS = false;
+				var cuerpo = document.getElementById(&quot;cuerpoPrincipal&quot;);
+				cuerpo.addEventListener('mousedown',clickDown);
+				cuerpo.addEventListener('mouseup',clickUp);
+			};
+			
+			function clickDown(event)
+			{
+				msj = false;
+				cS = false;
+			};
+			
+			function clickUp(event)
+			{
+				setTimeout(function(){ msj = true;},1);
+			};
+			
+			function isLogout()
+			{
+				cS ? rc() : null;
+			};
+			
+			myEvent(chkevent, function(e) { // For &gt;=IE7, Chrome, Firefox
+				var result;
+				var confirmationMessage = 'S&iacute; cierra la p&aacute;gina, se cerrara la sesion. &iquest;Est&aacute; seguro de querer abandonar la p&aacute;gina?';  // a space
+				var msjconf;
+				console.log(window.location.pathname);
+				console.log('/siger2/xhtml/login/login.xhtml');
+				console.log(window.location.pathname != '/siger2/xhtml/login/login.xhtml');
+				if(msj)
+				{
+					msjconf = (e || window.event);
+					msjconf.returnValue = confirmationMessage;
+					cS = true;
+					return confirmationMessage;
+				}
+				msj = true;
+			});
+			
+        &lt;/script&gt; -->
+<form id="j_idt97" name="j_idt97" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt97" value="j_idt97">
+<div id="j_idt97:j_idt98" class="ui-breadcrumb ui-module ui-widget ui-widget-header ui-helper-clearfix ui-corner-all" role="menu"><ul><li role="menuitem"><a id="j_idt97:j_id2" class="ui-menuitem-link ui-corner-all ui-icon ui-icon-home" href="javascript:void(0)" onclick="onclick=mostrarSpinner();;PrimeFaces.addSubmitParam('j_idt97',{'j_idt97:j_id2':'j_idt97:j_id2'}).submit('j_idt97');"><span class="ui-menuitem-text">Inicio</span></a></li><li class="ui-breadcrumb-chevron ui-icon ui-icon-triangle-1-e"></li><li role="menuitem"><a id="j_idt97:j_id3" class="ui-menuitem-link ui-corner-all" href="javascript:void(0)" onclick="onclick=mostrarSpinner();;PrimeFaces.addSubmitParam('j_idt97',{'j_idt97:j_id3':'j_idt97:j_id3'}).submit('j_idt97');"><span class="ui-menuitem-text">Consulta Pública</span></a></li></ul></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form>
+						   						    
+					 </header>
+					    <div id="content" style="text-align:center;width: 960px;"><div id="j_idt100" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="j_idt100_content" class="ui-panel-content ui-widget-content">
+
+<form id="formValores" name="formValores" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formValores" value="formValores">
+<table id="formValores:j_idt101" class="ui-panelgrid ui-widget" style="width: 100%;border: none;" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align:right;" colspan="4"><br></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="border: none;"><label>FME:</label></td><td role="gridcell" style="border: none;"><input id="formValores:fme" name="formValores:fme" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td><td role="gridcell" style="border: none;"><label>Razón/Denominación Social :</label></td><td role="gridcell" style="border: none;"><input id="formValores:rsocial" name="formValores:rsocial" type="text" value="INGENIERIA DE BOMBAS Y CONTROLES" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="border: none;"><label>Oficina Registral:</label></td><td id="formValores:colOficina" role="gridcell" style="border: none;"><table id="formValores:j_idt117" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell"><input id="formValores:clvOficina" name="formValores:clvOficina" type="text" maxlength="5" size="3" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td><td role="gridcell"><input id="formValores:oficina" name="formValores:oficina" type="text" maxlength="100" disabled="disabled" readonly="readonly" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled" role="textbox" aria-disabled="true" aria-readonly="true" aria-multiline="false"></td><td role="gridcell"><button id="formValores:consultar" name="formValores:consultar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({source:'formValores:consultar',process:'formValores:clvOficina formValores:consultar',update:'catalogoOficinasForm:modalOficinas',oncomplete:function(xhr,status,args){buscarCatalogoOficina.show();}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button></td></tr></tbody></table></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align:right;" colspan="4"><br></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell">
+           					<h3>Socios</h3></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="border: none;"><label>Nombre:</label></td><td role="gridcell" style="border: none;"><input id="formValores:nombre" name="formValores:nombre" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td><td role="gridcell" style="border: none;"><label>Apellido Paterno:</label></td><td role="gridcell" style="border: none;"><input id="formValores:apellido_paterno" name="formValores:apellido_paterno" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="border: none;"><label>Apellido Materno:</label></td><td role="gridcell" style="border: none;"><input id="formValores:apellido_materno" name="formValores:apellido_materno" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align:right;" colspan="4"><button id="formValores:consultaa" name="formValores:consultaa" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'formValores:consultaa',update:'formValores'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Buscar</span></button></td></tr></tbody></table><div id="formValores:dataTableCaratula" class="ui-datatable ui-widget" style=" width:100%;  padding-top:1%;   text-align:center;"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="formValores:dataTableCaratula_head"><tr role="row"><th id="formValores:dataTableCaratula:j_idt148" class="ui-state-default ui-selection-column" role="columnheader" style="width:10px"><span></span></th><th id="formValores:dataTableCaratula:j_idt150" class="ui-state-default wrap-text" role="columnheader" style="width:100px"><span>FME</span></th><th id="formValores:dataTableCaratula:j_idt152" class="ui-state-default wrap-text" role="columnheader" style="width:500px"><span>Nombre/Razón Social</span></th><th id="formValores:dataTableCaratula:j_idt154" class="ui-state-default wrap-text" role="columnheader" style="width:200px"><span>Oficina Registral</span></th></tr></thead><tfoot></tfoot><tbody id="formValores:dataTableCaratula_data" class="ui-datatable-data ui-widget-content"><tr data-ri="0" data-rk="3692420" class="ui-widget-content ui-datatable-even" role="row" aria-selected="false"><td role="gridcell" class="ui-selection-column"><div class="ui-radiobutton ui-widget"><div class="ui-helper-hidden-accessible"><input type="radio" name="formValores:dataTableCaratula_radio"></div><div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default"><span class="ui-radiobutton-icon"></span></div></div></td><td role="gridcell" class="wrap-text"><label id="formValores:dataTableCaratula:0:j_idt151" class="ui-outputlabel">13017</label></td><td role="gridcell" class="wrap-text"><label id="formValores:dataTableCaratula:0:j_idt153" class="ui-outputlabel">INGENIERIA DE BOMBAS Y CONTROLES, S.A. DE C.V.</label></td><td role="gridcell" class="wrap-text"><label id="formValores:dataTableCaratula:0:j_idt155" class="ui-outputlabel">Tijuana</label></td></tr></tbody></table></div><div id="formValores:dataTableCaratula_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom"><span class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev">p</span></span><span class="ui-paginator-pages"><span class="ui-paginator-page ui-state-default ui-state-active ui-corner-all">1</span></span><span class="ui-paginator-current">Página 1 de 1 (1 registros)</span><span class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-next">p</span></span></div><input type="hidden" id="formValores:dataTableCaratula_selection" name="formValores:dataTableCaratula_selection" autocomplete="off" value=""></div><div id="formValores:j_idt156" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:right;"><div id="formValores:j_idt156_content" class="ui-panel-content ui-widget-content"><button id="formValores:revisarPago" name="formValores:revisarPago" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'formValores:revisarPago'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Revisar</span></button></div></div>
+<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off"></form>
+<form id="catalogoOficinasForm" name="catalogoOficinasForm" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="catalogoOficinasForm" value="catalogoOficinasForm">
+<div id="catalogoOficinasForm:modalOficinas" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable ui-resizable" role="dialog" aria-labelledby="catalogoOficinasForm:modalOficinas_title" aria-hidden="true" style="width: 400px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="catalogoOficinasForm:modalOficinas_title" class="ui-dialog-title">Catálogo de Oficina</span></div><div class="ui-dialog-content ui-widget-content" style="height: 400px;"><div id="catalogoOficinasForm:oficinaTable" class="ui-datatable ui-widget"><div class="ui-datatable-header ui-widget-header ui-corner-top">
+           Clave/Nombre:
+           <input id="catalogoOficinasForm:oficinaTable:texto" name="catalogoOficinasForm:oficinaTable:texto" type="text" title="Criterio de búsqueda requerido" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"><button id="catalogoOficinasForm:oficinaTable:buscarO" name="catalogoOficinasForm:oficinaTable:buscarO" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({source:'catalogoOficinasForm:oficinaTable:buscarO',update:'catalogoOficinasForm:oficinaTable'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span><span class="ui-button-text ui-c">ui-button</span></button></div><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="catalogoOficinasForm:oficinaTable_head"><tr role="row"><th id="catalogoOficinasForm:oficinaTable:claveO" class="ui-state-default" role="columnheader"><span>Clave</span></th><th id="catalogoOficinasForm:oficinaTable:nombreO" class="ui-state-default" role="columnheader"><span>Nombre</span></th></tr></thead><tfoot></tfoot><tbody id="catalogoOficinasForm:oficinaTable_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="2">No se encuentra la clave registrada</td></tr></tbody></table></div><div id="catalogoOficinasForm:oficinaTable_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom"><span class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev">p</span></span><span class="ui-paginator-pages"></span><span class="ui-paginator-current">Página 1 de 1 (0 registros)</span><span class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-next">p</span></span></div><input type="hidden" id="catalogoOficinasForm:oficinaTable_selection" name="catalogoOficinasForm:oficinaTable_selection" autocomplete="off" value="null"></div><div id="catalogoOficinasForm:j_idt161" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="catalogoOficinasForm:j_idt161_content" class="ui-panel-content ui-widget-content"><input id="catalogoOficinasForm:j_idt162" type="submit" name="catalogoOficinasForm:j_idt162" value="Salir" onclick="jsf.util.chain(this,event,'buscarCatalogoOficina.hide();','mojarra.ab(this,event,\'action\',\'formValores\',\'formValores\')');return false"><input id="catalogoOficinasForm:buscarCatalogoOficinaGr" type="submit" name="catalogoOficinasForm:buscarCatalogoOficinaGr" value="Seleccionar" class="boton_principal" onclick="jsf.util.chain(this,event,'buscarCatalogoOficina.hide();','mojarra.ab(this,event,\'action\',\'catalogoOficinasForm\',\'formValores\')');return false"></div></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div></div>
+<form id="formTipoPago" name="formTipoPago" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formTipoPago" value="formTipoPago">
+<div id="formTipoPago:dialogPagoDerecho" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:dialogPagoDerecho_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:dialogPagoDerecho_title" class="ui-dialog-title">Pago de derecho de consulta</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
+
+<input type="hidden" name="formTipoPago:formPagoDerechosCDC1" value="formTipoPago:formPagoDerechosCDC1">
+
+		<div>
+			<h3>Derechos
+			</h3><table id="formTipoPago:formPagoDerechosCDC1:panelGridPagoDerechosCDC1" class="ui-panelgrid ui-widget officeRelated" style="width:100%;" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell"><table id="formTipoPago:formPagoDerechosCDC1:j_idt171" class="ui-panelgrid ui-widget" style="width:400px;" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" colspan="4"><table id="formTipoPago:formPagoDerechosCDC1:j_idt175" class="ui-selectoneradio ui-widget"></table></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell">Monto: </td><td role="gridcell"><span id="formTipoPago:formPagoDerechosCDC1:montoPagoDerechos"></span></td><td role="gridcell"></td><td role="gridcell"><a id="formTipoPago:formPagoDerechosCDC1:j_idt183" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoDerechosCDC1:j_idt183',process:'formTipoPago:formPagoDerechosCDC1:j_idt183',oncomplete:function(xhr,status,args){datosReciboDialogCDC1.show();}});return false;">Datos recibo</a></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell">Saldo: </td><td role="gridcell"><span id="formTipoPago:formPagoDerechosCDC1:saldoCDC1"></span></td><td role="gridcell"><a id="formTipoPago:formPagoDerechosCDC1:j_idt198" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoDerechosCDC1:j_idt198',process:'formTipoPago:formPagoDerechosCDC1:j_idt198'});return false;">Abonar</a></td><td role="gridcell"></td></tr></tbody></table></td><td role="gridcell"><div id="formTipoPago:formPagoDerechosCDC1:j_idt200" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="formTipoPago:formPagoDerechosCDC1:j_idt200_content" class="ui-panel-content ui-widget-content">
+					<h3 style="text-align: left; margin-bottom: 1%;"><label id="formTipoPago:formPagoDerechosCDC1:j_idt202" class="ui-outputlabel">Descuentos</label>
+					</h3><div id="formTipoPago:formPagoDerechosCDC1:dataTableDescuentosCDC1" class="ui-datatable ui-widget" style="margin-bottom:0; width:350px;"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="formTipoPago:formPagoDerechosCDC1:dataTableDescuentosCDC1_head"><tr role="row"><th id="formTipoPago:formPagoDerechosCDC1:dataTableDescuentosCDC1:j_idt206" class="ui-state-default" role="columnheader" style="text-align:left"><span>Descuentos</span></th></tr></thead><tfoot></tfoot><tbody id="formTipoPago:formPagoDerechosCDC1:dataTableDescuentosCDC1_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="1">No se encontraron registros</td></tr></tbody></table></div></div></div></div></td></tr></tbody></table>			
+		</div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+<div id="formTipoPago:desgloseDialogCDC1" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:desgloseDialogCDC1_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:desgloseDialogCDC1_title" class="ui-dialog-title">Desglose</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
+<form id="formTipoPago:desgloseMontosDialogFormCDC1" name="formTipoPago:desgloseMontosDialogFormCDC1" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formTipoPago:desgloseMontosDialogFormCDC1" value="formTipoPago:desgloseMontosDialogFormCDC1">
+<div id="formTipoPago:desgloseMontosDialogFormCDC1:displayDesgloseFormasCDC1" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="formTipoPago:desgloseMontosDialogFormCDC1:displayDesgloseFormasCDC1_content" class="ui-panel-content ui-widget-content">
+           	
+           	<center><div id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1_head"><tr role="row"><th id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1:j_idt210" class="ui-state-default" role="columnheader"><span>Concepto</span></th><th id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1:j_idt215" class="ui-state-default" role="columnheader" style="text-align: right;"><span>Importe</span></th></tr></thead><tfoot></tfoot><tbody id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="2">No se encontraron registros</td></tr></tbody></table></div><div id="formTipoPago:desgloseMontosDialogFormCDC1:tablaDesgloseCDC1_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header"><span class="ui-paginator-first ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first">p</span></span><span class="ui-paginator-prev ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev">p</span></span><span class="ui-paginator-current">Página 1 de 1 (0 registros)</span><span class="ui-paginator-next ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-next">p</span></span><span class="ui-paginator-last ui-state-default ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-end">p</span></span></div><div class="ui-datatable-footer ui-widget-header ui-corner-bottom">Total:</div></div>
+		</center></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div></div><div id="formTipoPago:dialogPagoPortalCDC1" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:dialogPagoPortalCDC1_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:dialogPagoPortalCDC1_title" class="ui-dialog-title">Pago por portal</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
+<form id="formTipoPago:formPagoPortalCDC1false" name="formTipoPago:formPagoPortalCDC1false" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formTipoPago:formPagoPortalCDC1false" value="formTipoPago:formPagoPortalCDC1false">
+<input id="formTipoPago:formPagoPortalCDC1false:url" type="hidden" name="formTipoPago:formPagoPortalCDC1false:url"><input id="formTipoPago:formPagoPortalCDC1false:respuestaPortal" type="hidden" name="formTipoPago:formPagoPortalCDC1false:respuestaPortal"><input id="formTipoPago:formPagoPortalCDC1false:montoEdit" type="hidden" name="formTipoPago:formPagoPortalCDC1false:montoEdit" value="false"><input id="formTipoPago:formPagoPortalCDC1false:montoPrecarga" type="hidden" name="formTipoPago:formPagoPortalCDC1false:montoPrecarga"><input id="formTipoPago:formPagoPortalCDC1false:abonoMonedero" type="hidden" name="formTipoPago:formPagoPortalCDC1false:abonoMonedero" value="false"><input id="formTipoPago:formPagoPortalCDC1false:idComponente" type="hidden" name="formTipoPago:formPagoPortalCDC1false:idComponente" value="CDC1"><div id="formTipoPago:formPagoPortalCDC1false:panelPago" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="margin-top:3%;padding:1%;"><div id="formTipoPago:formPagoPortalCDC1false:panelPago_content" class="ui-panel-content ui-widget-content"><table id="formTipoPago:formPagoPortalCDC1false:j_idt228" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell"><label id="formTipoPago:formPagoPortalCDC1false:j_idt235" class="ui-outputlabel">Localidad de pago:</label></td><td role="gridcell"><label id="formTipoPago:formPagoPortalCDC1false:j_idt239" class="ui-outputlabel"></label></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label id="formTipoPago:formPagoPortalCDC1false:j_idt245" class="ui-outputlabel">Saldo:</label></td><td role="gridcell"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label id="formTipoPago:formPagoPortalCDC1false:j_idt253" class="ui-outputlabel">Portal: </label></td><td role="gridcell"><table id="formTipoPago:formPagoPortalCDC1false:portalesOficina" class="ui-selectoneradio ui-widget"></table></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"></td><td role="gridcell"><script type="text/javascript">keyupValidarMonto = function() {PrimeFaces.ab({source:'formTipoPago:formPagoPortalCDC1false:j_idt260',formId:'formTipoPago:formPagoPortalCDC1false',update:'formTipoPago:formPagoPortalCDC1false:abonar',onstart:function(cfg){mostrarSpinnerNoDelay();;},oncomplete:function(xhr,status,args){ocultarSpinner();;},params:arguments[0]});}</script></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" colspan="2">
+						<br></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align:right;" colspan="2"><button id="formTipoPago:formPagoPortalCDC1false:cancelar" name="formTipoPago:formPagoPortalCDC1false:cancelar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoPortalCDC1false:cancelar',oncomplete:function(xhr,status,args){cerrarDialogModal();;}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cancelar</span></button><button id="formTipoPago:formPagoPortalCDC1false:abonar" name="formTipoPago:formPagoPortalCDC1false:abonar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal float_right" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoPortalCDC1false:abonar',process:'formTipoPago:formPagoPortalCDC1false',update:'formTipoPago:formPagoPortalCDC1false'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Realizar pago</span></button></td></tr></tbody></table><div id="formTipoPago:formPagoPortalCDC1false:j_idt266" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="formTipoPago:formPagoPortalCDC1false:j_idt266_content" class="ui-panel-content ui-widget-content">
+				<p style="display: none"><button id="formTipoPago:formPagoPortalCDC1false:validar" name="formTipoPago:formPagoPortalCDC1false:validar" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoPortalCDC1false:validar',process:'formTipoPago:formPagoPortalCDC1false',update:'formTipoPago:formPagoPortalCDC1false',oncomplete:function(xhr,status,args){procesarRespuestaPago('formPagoPortalCDC1false');}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Validar</span></button><button id="formTipoPago:formPagoPortalCDC1false:mensajeTiempo" name="formTipoPago:formPagoPortalCDC1false:mensajeTiempo" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:formPagoPortalCDC1false:mensajeTiempo',process:'formTipoPago:formPagoPortalCDC1false'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Mensaje Tiempo</span></button>
+				</p></div></div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form><div id="formTipoPago:datosReciboDialogIdRPPCDC1false" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:datosReciboDialogIdRPPCDC1false_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:datosReciboDialogIdRPPCDC1false_title" class="ui-dialog-title">Información Recibo de Pago</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><div id="formTipoPago:displayDatosReciboRPPCDC1false" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="formTipoPago:displayDatosReciboRPPCDC1false_content" class="ui-panel-content ui-widget-content">
+<form id="formTipoPago:datosReciboDialogFormRPPCDC1false" name="formTipoPago:datosReciboDialogFormRPPCDC1false" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formTipoPago:datosReciboDialogFormRPPCDC1false" value="formTipoPago:datosReciboDialogFormRPPCDC1false">
+<table id="formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt271" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Tipo persona:</label></td><td role="gridcell"><table id="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona" class="ui-selectoneradio ui-widget"><tbody><tr><td><div class="ui-radiobutton ui-widget"><div class="ui-helper-hidden-accessible"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona:0" name="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona" type="radio" value="false" checked="checked"></div><div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default ui-state-active"><span class="ui-radiobutton-icon ui-icon ui-icon-bullet"></span></div></div></td><td><label for="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona:0">Física </label></td><td><div class="ui-radiobutton ui-widget"><div class="ui-helper-hidden-accessible"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona:1" name="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona" type="radio" value="true"></div><div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default"><span class="ui-radiobutton-icon"></span></div></div></td><td><label for="formTipoPago:datosReciboDialogFormRPPCDC1false:tipoPersona:1">Moral</label></td></tr></tbody></table></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Nombre:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:nombre" name="formTipoPago:datosReciboDialogFormRPPCDC1false:nombre" type="text" maxlength="40" size="40" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Apellido paterno:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:aPaterno" name="formTipoPago:datosReciboDialogFormRPPCDC1false:aPaterno" type="text" maxlength="40" size="40" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Apellido materno:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:aMaterno" name="formTipoPago:datosReciboDialogFormRPPCDC1false:aMaterno" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>CURP:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:curp" name="formTipoPago:datosReciboDialogFormRPPCDC1false:curp" type="text" maxlength="18" size="20" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Razón social:</label></td><td role="gridcell"><textarea id="formTipoPago:datosReciboDialogFormRPPCDC1false:razonSocial" name="formTipoPago:datosReciboDialogFormRPPCDC1false:razonSocial" cols="40" rows="3" title="" disabled="disabled" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-state-disabled ui-inputtextarea-resizable" role="textbox" aria-disabled="true" aria-readonly="false" aria-multiline="true"></textarea></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>RFC:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:rfc" name="formTipoPago:datosReciboDialogFormRPPCDC1false:rfc" type="text" maxlength="13" size="15" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Calle:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:calle" name="formTipoPago:datosReciboDialogFormRPPCDC1false:calle" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Número:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:numero" name="formTipoPago:datosReciboDialogFormRPPCDC1false:numero" type="text" maxlength="10" size="11" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Colonia:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:colonia" name="formTipoPago:datosReciboDialogFormRPPCDC1false:colonia" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Población:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:poblacion" name="formTipoPago:datosReciboDialogFormRPPCDC1false:poblacion" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Municipio:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:municipio" name="formTipoPago:datosReciboDialogFormRPPCDC1false:municipio" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Código postal:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:cp" name="formTipoPago:datosReciboDialogFormRPPCDC1false:cp" type="text" maxlength="5" size="6" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Entidad Federativa:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormRPPCDC1false:estado" name="formTipoPago:datosReciboDialogFormRPPCDC1false:estado" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Observaciones:</label></td><td role="gridcell"><textarea id="formTipoPago:datosReciboDialogFormRPPCDC1false:observaciones" name="formTipoPago:datosReciboDialogFormRPPCDC1false:observaciones" cols="40" rows="3" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="true"></textarea></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align: right;" colspan="2"><button id="formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt383" name="formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt383" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt383',process:'formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt383',update:'formTipoPago:datosReciboDialogFormRPPCDC1false',oncomplete:function(xhr,status,args){datosReciboDialogRPPCDC1false.hide();}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cancelar</span></button><button id="formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt385" name="formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt385" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'formTipoPago:datosReciboDialogFormRPPCDC1false:j_idt385',process:'formTipoPago:datosReciboDialogFormRPPCDC1false',update:'formTipoPago:datosReciboDialogFormRPPCDC1false'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Aceptar</span></button></td></tr></tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div></div></div></div>
+</div></div><div id="formTipoPago:datosReciboDialogIdCDC1" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:datosReciboDialogIdCDC1_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:datosReciboDialogIdCDC1_title" class="ui-dialog-title">Información Recibo de Pago</span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><div id="formTipoPago:displayDatosReciboCDC1" class="ui-panel ui-widget ui-widget-content ui-corner-all"><div id="formTipoPago:displayDatosReciboCDC1_content" class="ui-panel-content ui-widget-content">
+<form id="formTipoPago:datosReciboDialogFormCDC1" name="formTipoPago:datosReciboDialogFormCDC1" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formTipoPago:datosReciboDialogFormCDC1" value="formTipoPago:datosReciboDialogFormCDC1">
+<table id="formTipoPago:datosReciboDialogFormCDC1:j_idt415" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Tipo persona:</label></td><td role="gridcell"><table id="formTipoPago:datosReciboDialogFormCDC1:tipoPersona" class="ui-selectoneradio ui-widget"><tbody><tr><td><div class="ui-radiobutton ui-widget"><div class="ui-helper-hidden-accessible"><input id="formTipoPago:datosReciboDialogFormCDC1:tipoPersona:0" name="formTipoPago:datosReciboDialogFormCDC1:tipoPersona" type="radio" value="false" checked="checked"></div><div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default ui-state-active"><span class="ui-radiobutton-icon ui-icon ui-icon-bullet"></span></div></div></td><td><label for="formTipoPago:datosReciboDialogFormCDC1:tipoPersona:0">Física </label></td><td><div class="ui-radiobutton ui-widget"><div class="ui-helper-hidden-accessible"><input id="formTipoPago:datosReciboDialogFormCDC1:tipoPersona:1" name="formTipoPago:datosReciboDialogFormCDC1:tipoPersona" type="radio" value="true"></div><div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default"><span class="ui-radiobutton-icon"></span></div></div></td><td><label for="formTipoPago:datosReciboDialogFormCDC1:tipoPersona:1">Moral</label></td></tr></tbody></table></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Nombre:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:nombre" name="formTipoPago:datosReciboDialogFormCDC1:nombre" type="text" maxlength="40" size="40" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Apellido paterno:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:aPaterno" name="formTipoPago:datosReciboDialogFormCDC1:aPaterno" type="text" maxlength="40" size="40" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Apellido materno:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:aMaterno" name="formTipoPago:datosReciboDialogFormCDC1:aMaterno" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>CURP:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:curp" name="formTipoPago:datosReciboDialogFormCDC1:curp" type="text" maxlength="18" size="20" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Razón social:</label></td><td role="gridcell"><textarea id="formTipoPago:datosReciboDialogFormCDC1:razonSocial" name="formTipoPago:datosReciboDialogFormCDC1:razonSocial" cols="40" rows="3" title="" disabled="disabled" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-state-disabled ui-inputtextarea-resizable" role="textbox" aria-disabled="true" aria-readonly="false" aria-multiline="true"></textarea></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>RFC:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:rfc" name="formTipoPago:datosReciboDialogFormCDC1:rfc" type="text" maxlength="13" size="15" title="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Calle:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:calle" name="formTipoPago:datosReciboDialogFormCDC1:calle" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Número:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:numero" name="formTipoPago:datosReciboDialogFormCDC1:numero" type="text" maxlength="10" size="11" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Colonia:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:colonia" name="formTipoPago:datosReciboDialogFormCDC1:colonia" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Población:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:poblacion" name="formTipoPago:datosReciboDialogFormCDC1:poblacion" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Municipio:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:municipio" name="formTipoPago:datosReciboDialogFormCDC1:municipio" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Código postal:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:cp" name="formTipoPago:datosReciboDialogFormCDC1:cp" type="text" maxlength="5" size="6" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Entidad Federativa:</label></td><td role="gridcell"><input id="formTipoPago:datosReciboDialogFormCDC1:estado" name="formTipoPago:datosReciboDialogFormCDC1:estado" type="text" maxlength="40" size="40" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false"></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell"><label>Observaciones:</label></td><td role="gridcell"><textarea id="formTipoPago:datosReciboDialogFormCDC1:observaciones" name="formTipoPago:datosReciboDialogFormCDC1:observaciones" cols="40" rows="3" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="true"></textarea></td></tr><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align: right;" colspan="2"><button id="formTipoPago:datosReciboDialogFormCDC1:j_idt487" name="formTipoPago:datosReciboDialogFormCDC1:j_idt487" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:datosReciboDialogFormCDC1:j_idt487',process:'formTipoPago:datosReciboDialogFormCDC1:j_idt487',update:'formTipoPago:datosReciboDialogFormCDC1',oncomplete:function(xhr,status,args){datosReciboDialogCDC1.hide();}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cancelar</span></button><button id="formTipoPago:datosReciboDialogFormCDC1:j_idt488" name="formTipoPago:datosReciboDialogFormCDC1:j_idt488" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'formTipoPago:datosReciboDialogFormCDC1:j_idt488',process:'formTipoPago:datosReciboDialogFormCDC1',update:'formTipoPago:datosReciboDialogFormCDC1'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Aceptar</span></button></td></tr></tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div></div></div></div><div id="formTipoPago:j_idt489" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width: 100%; text-align: right"><div id="formTipoPago:j_idt489_content" class="ui-panel-content ui-widget-content"><button id="formTipoPago:j_idt490" name="formTipoPago:j_idt490" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Continuar consulta</span></button></div></div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off"></form><div id="formTipoPago:dialogPagoDerechoNoConfigurado" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:dialogPagoDerechoNoConfigurado_title" aria-hidden="true" style="width: 400px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:dialogPagoDerechoNoConfigurado_title" class="ui-dialog-title">Mensaje</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: 230px;"></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+<div id="dialogLineaCapturaCDC1" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable ui-resizable" role="dialog" aria-labelledby="dialogLineaCapturaCDC1_title" aria-hidden="true" style="width: 880px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="dialogLineaCapturaCDC1_title" class="ui-dialog-title">Líneas de captura</span></div><div class="ui-dialog-content ui-widget-content" style="height: 328px;">
+<form id="formLineaCapturaCDC1" name="formLineaCapturaCDC1" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formLineaCapturaCDC1" value="formLineaCapturaCDC1">
+<div id="formLineaCapturaCDC1:panelDatosGeneralesCDC1" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="text-align:left"><div id="formLineaCapturaCDC1:panelDatosGeneralesCDC1_content" class="ui-panel-content ui-widget-content"><table style="width:100%">
+<tbody>
+<tr>
+<td><label for="formLineaCapturaCDC1:saldoEnLinea">Saldo en línea:</label><span id="formLineaCapturaCDC1:saldoEnLinea" style="width:100%">$0.00</span></td>
+</tr>
+<tr>
+<td><label for="formLineaCapturaCDC1:pagoDerechos">Pago de derechos:</label><span id="formLineaCapturaCDC1:pagoDerechos" style="width:100%">$0.00</span></td>
+</tr>
+<tr>
+<td><label>Diferencia:</label><span id="formLineaCapturaCDC1:diferencia" style="width:100%">$0.00</span></td>
+</tr>
+</tbody>
+</table>
+</div></div><div id="formLineaCapturaCDC1:lineaCapturaTablaCDC1" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="formLineaCapturaCDC1:lineaCapturaTablaCDC1_head"><tr role="row"><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt515" class="ui-state-default" role="columnheader"><span>Fecha de pago</span></th><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt519" class="ui-state-default" role="columnheader"><span>Línea de captura</span></th><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt525" class="ui-state-default" role="columnheader"><span>Importe</span></th><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt529" class="ui-state-default" role="columnheader"><span>Concepto</span></th><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt532" class="ui-state-default" role="columnheader"><span>Fecha límite de pago</span></th><th id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt534" class="ui-state-default" role="columnheader"><span></span></th></tr></thead><tfoot></tfoot><tbody id="formLineaCapturaCDC1:lineaCapturaTablaCDC1_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="6">No existen registros</td></tr></tbody></table></div><div class="ui-datatable-footer ui-widget-header ui-corner-bottom">
+                        <div style="width: 100%; text-align: right;"><button id="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt541" name="formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt541" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" onclick="PrimeFaces.ab({source:'formLineaCapturaCDC1:lineaCapturaTablaCDC1:j_idt541',update:'formLineaCapturaCDC1:lineaCapturaTablaCDC1'});return false;" title="Agregar línea de captura" type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-plus"></span><span class="ui-button-text ui-c">ui-button</span></button>
+                        </div></div></div>
+                
+                <div align="right"><table id="formLineaCapturaCDC1:j_idt547" class="ui-panelgrid ui-widget" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" style="text-align: right;"><button id="formLineaCapturaCDC1:j_idt554" name="formLineaCapturaCDC1:j_idt554" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'formLineaCapturaCDC1:j_idt554'});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cerrar</span></button></td></tr></tbody></table>
+                </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div></div>
+					    </div>
+					    <div id="footer" style="text-align:center">
+		<footer id="site-footer">
+		<div class="derechos_reservados" style="width: 100%;">
+			SECRETARÍA DE ECONOMÍA. ALGUNOS DERECHOS RESERVADOS. 2014.&nbsp;<a href="#" onclick="dlgAP.show();return false;">AVISO DE PRIVACIDAD</a>&nbsp;-&nbsp;<a href="#" onclick="dlgTC.show();return false;">TÉRMINOS Y
+				CONDICIONES</a>
+		</div>
+		<div class="middle">
+			<a href="http://www.economia.gob.mx/" id="logo-footer"> </a>
+		</div>
+		<div class="art-footer-text">
+			<p>Avenida Insurgentes Sur No.1940, Colonia Florida</p>
+			<p>Delegación Álvaro Obregón, C.P. 01030</p>
+			<p>México, Distrito Federal</p>
+		</div>
+		</footer>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+	    </div>
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="growlForm:growlExito_container" class="ui-growl ui-widget" style="z-index: 1006;"></div><div id="j_idt65:messages_container" class="ui-growl ui-widget" style="z-index: 1002;"></div><div class="ui-dialog-docking-zone"></div><div id="formTipoPago:dialogModalEsperandoCDC1" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:dialogModalEsperandoCDC1_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:dialogModalEsperandoCDC1_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"></div></div><div id="formTipoPago:j_idt397" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:j_idt397_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:j_idt397_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
+		<h3 style="text-align: left; margin-bottom: 1%;"><label id="formTipoPago:j_idt399" class="ui-outputlabel">Confirmación de pago.</label>
+		</h3>
+		<br><button id="formTipoPago:j_idt402" name="formTipoPago:j_idt402" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:j_idt402',oncomplete:function(xhr,status,args){dialogModalPortalExito.hide(); if(typeof pantallaPortal!=='undefined'){pantallaPortal.hide();} if(typeof pantallaPortalMonedero!=='undefined'){pantallaPortalMonedero.hide();};}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cerrar</span></button></div></div><div id="formTipoPago:j_idt404" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable" role="dialog" aria-labelledby="formTipoPago:j_idt404_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="formTipoPago:j_idt404_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">
+		<h3 style="text-align: left; margin-bottom: 1%;"><label id="formTipoPago:j_idt409" class="ui-outputlabel">Error en el pago.</label>
+		</h3>
+		<br><button id="formTipoPago:j_idt411" name="formTipoPago:j_idt411" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({source:'formTipoPago:j_idt411',oncomplete:function(xhr,status,args){dialogModalPortalError.hide();if(typeof pantallaPortal!=='undefined'){pantallaPortal.hide();} if(typeof pantallaPortalMonedero!=='undefined'){pantallaPortalMonedero.hide();};}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cerrar</span></button></div></div><div id="j_idt558" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow" role="dialog" aria-labelledby="j_idt558_title" aria-hidden="true" style="width: auto; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><p><span class="ui-icon ui-icon-alert ui-confirm-dialog-severity"></span>¿Desea confirmar la eliminación de la línea de captura?</p></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+<form id="j_idt559" name="j_idt559" method="post" action="/siger2/xhtml/consulta/consultaPublica/consultaPublica.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt559" value="j_idt559">
+
+                        <div align="center"><button id="j_idt559:j_idt561" name="j_idt559:j_idt561" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="confirmation.hide();;" type="button" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Cancelar</span></button><button id="j_idt559:j_idt562" name="j_idt559:j_idt562" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_principal" onclick="PrimeFaces.ab({source:'j_idt559:j_idt562',update:'formLineaCapturaCDC1:lineaCapturaTablaCDC1 formLineaCapturaCDC1:panelDatosGeneralesCDC1',oncomplete:function(xhr,status,args){confirmation.hide();;}});return false;" type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Aceptar</span></button>
+                        </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-8658649818293773324:-5081451707860156940" autocomplete="off">
+</form></div></div><div id="j_idt566" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable ui-resizable" role="dialog" aria-labelledby="j_idt566_title" aria-hidden="true" style="width: 550px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt566_title" class="ui-dialog-title">Terminos y Condiciones de uso</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;"><div id="j_idt567" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width: 100%;height:250px;overflow:auto;"><div id="j_idt567_content" class="ui-panel-content ui-widget-content">
+		<h3>Términos y condiciones de uso</h3>
+		<p>Estimado usuario, esta página establece los "Términos y
+			Condiciones" que regulan el uso del Portal denominado Registro
+			Público de Comercio con dirección electrónica http://www. (en
+			adelante, el "Portal"), incluyendo el Sistema Integral de Gestión
+			Registral versión 2.0 (en adelante “SIGER 2.0”). Le pedimos que lea
+			cuidadosamente los siguientes términos y condiciones de uso, ya que
+			por el simple uso o acceso a cualquiera de las páginas que integran
+			el Portal se entenderá que acepta y acuerda obligarse en los términos
+			y condiciones aquí descritos. Si no acepta estos Términos y
+			Condiciones, no podrá tener acceso al mismo. La información ingresada
+			a este Portal es para uso exclusivo del Gobierno Federal, fedatarios
+			públicos y los registros públicos de comercio, a fin de facilitar los
+			trámites de inscripción de actos mercantiles.</p>
+		<h4>BENEFICIOS Y ALCANCES DEL PORTAL</h4>
+		<p>De conformidad con lo dispuesto en el artículo 20, 20 bis, 21
+			bis, 30, 30 bis y 30 bis 1 del Código de Comercio, el Gobierno
+			Federal pone a disposición del usuario este Portal, el cual será
+			obligatorio para el personal que opera el SIGER 2.0 y optativo para
+			el fedatario público y ciudadanos ya que en todo momento podrán
+			realizar los trámites de manera presencial ante las instancias
+			respectivas.</p>
+		<p>Se hace del conocimiento del usuario que los documentos
+			presentados por medios de identificación electrónica a través del
+			Portal, producirán los mismos efectos que las leyes otorgan a los
+			documentos firmados autógrafamente, salvo los casos que la ley así
+			determine.</p>
+		<p>El Gobierno Federal procesa y usa los datos e información
+			personal del usuario sólo para los servicios determinados dentro del
+			Portal, con la finalidad de ahorrarle tiempo, evitando así ingresar
+			repetidamente toda su información en cada uno de los trámites que
+			realice en el Registro Público de Comercio. Dichos datos e
+			información podrán ser incluidos dentro de los informes estadísticos
+			que se elaboren para el seguimiento de avances institucionales del
+			Gobierno Federal, tomando en cuenta lo señalado en las Políticas de
+			Privacidad del Portal.</p>
+		<h4>USO DEL CONTENIDO DEL PORTAL</h4>
+		<p>Los contenidos del Portal tales como textos, gráficos,
+			imágenes, logos, íconos de botón, software y cualquier otro
+			contenido, deberán utilizarse por el usuario únicamente para los
+			fines para los cuales ha sido creado. El uso no autorizado del
+			contenido del Portal será sancionado en términos de la legislación
+			aplicable. De igual forma se sancionará penalmente al que de manera
+			dolosa o con fines de lucro interrumpa o interfiera las
+			comunicaciones alámbricas, inalámbricas o de fibra óptica, sean
+			telefónicas o satelitales, por medio de las cuales se transfieran
+			señales de datos.</p>
+		<h4>USO PERMITIDO DEL PORTAL</h4>
+		<p>El Portal sólo podrá ser utilizado para la realización y/o
+			conclusión de distintos trámites relacionados con el Registro Público
+			de Comercio. El Portal también podrá ser utilizado para consultar,
+			entre otros, el estado de los trámites iniciados, información
+			registrada previo el pago de derechos que se causen cuando así
+			corresponda, los trámites que pueden realizarse en el sitio, los
+			documentos que se necesitan y la legislación que resulta aplicable.</p>
+		<p>El usuario será responsable de la veracidad, certeza, realidad,
+			legalidad y licitud de la información proporcionada en el Portal y
+			será sancionado penalmente por la falsedad de las declaraciones que
+			haga ante la autoridad y por la falsificación de documentos.
+			Adicionalmente, el usuario es responsable por los daños y/o
+			perjuicios que se pudieran ocasionar a terceros, incluyendo el
+			Estado, por el mal uso del Portal, o porque al utilizarlo se
+			infrinjan, directa o indirectamente entre otros, los derechos de
+			propiedad intelectual y/o se violen pactos o convenios de
+			confidencialidad. El usuario asume total responsabilidad en caso de
+			que la información proporcionada sea falsa, engañosa,
+			discriminatoria, difamatoria, obscena, ofensiva, contraria al orden
+			público o a las buenas costumbres, en los términos y bajo las
+			sanciones contenidas en la legislación que resulte aplicable.</p>
+		<h4>PROHIBICIONES</h4>
+		<p>Se prohíbe a los usuarios violar o intentar violar la seguridad
+			del Portal, incluyendo pero no limitándose a: a) acceder a datos que
+			no estén destinados al usuario o entrar en un servidor o cuenta cuyo
+			acceso no esté autorizado al usuario, b) evaluar o probar la
+			vulnerabilidad de un sistema o red, o violar las medidas de seguridad
+			o identificación sin la adecuada autorización y c) intentar impedir
+			el servicio a cualquier usuario, anfitrión o red, incluso mediante el
+			envío de virus al Portal o bloqueos del sistema.</p>
+		<p>Las violaciones de la seguridad del sistema o de la red pueden
+			resultar en responsabilidades civiles o penales en términos de la
+			legislación aplicable.</p>
+		<h4>SE PROHÍBE ESPECÍFICAMENTE EL USO DEL PORTAL PARA CUALQUIERA
+			DE LOS SIGUIENTES FINES:</h4>
+		<ul>
+			<li>Usar el Portal para cualquier propósito distinto al fin para
+				el cual fue creado.</li>
+			<li>Impedir el adecuado funcionamiento del Portal, mediante el
+				uso de cualquier mecanismo, software o rutina.</li>
+			<li>Intentar descifrar, separar u obtener el código fuente de
+				cualquier programa de software que comprenda o constituya una parte
+				del Portal.</li>
+			<li>La extracción, a través de una transferencia temporal o
+				permanente a cualquier medio, de la totalidad o de una parte del
+				contenido de las bases de datos disponibles en el Portal, cualquiera
+				que sea el medio utilizado o la forma en que se realice.</li>
+			<li>Interrumpir o interferir las comunicaciones alámbricas,
+				inalámbricas o de fibra óptica, sean telefónicas o satelitales, por
+				medio de las cuales se transfieran señales de datos.</li>
+		</ul>
+		<h4>BIENES Y SERVICIOS DE TERCEROS ENLAZADOS</h4>
+		<p>Respecto de los servicios y contenidos que prestan terceros
+			dentro o mediante enlaces al Portal (tales como ligas, banners y
+			botones), el Gobierno Federal se limita exclusivamente para
+			conveniencia del usuario a: a) informar al usuario sobre los mismos y
+			b) proporcionar un medio para poner en contacto al usuario con
+			terceros. Salvo en los casos de enlaces con dependencias federales,
+			el Gobierno Federal no es ni podrá ser considerado como proveedor de
+			los bienes y/o servicios que se ofrecen en dichas páginas y/o sitios.
+			La inclusión de dichas páginas y/o enlaces no implica la aprobación,
+			respaldo, patrocinio, recomendación o garantía por parte del Gobierno
+			Federal de los servicios y bienes que se comercializan en los mismos
+			ni del contenido de dichas páginas, por lo tanto, el usuario será el
+			responsable de revisar las políticas de privacidad que requieran esos
+			sitios de internet.</p>
+		<h4>POLÍTICAS DE PRIVACIDAD DEL PORTAL (DATOS PERSONALES,
+			INFORMACIÓN RESERVADA Y CONFIDENCIAL)</h4>
+		<p>Los datos personales recabados serán protegidos, incorporados y
+			tratados en el sistema de datos personales del Registro Público de
+			Comercio, registrado en el Listado de Sistemas de Datos Personales
+			ante el Instituto Federal de Acceso a la Información Pública
+			Gubernamental (www.ifai.org.mx), con fundamento en los artículos 3
+			fracciones II y XIII, 13, 14, 18, 19, 20, 23, 24 y 25 de la Ley
+			Federal de Transparencia y Acceso a la Información Pública
+			Gubernamental, 26, 27, 28, 37, 38, 40, 47 y 48 de su Reglamento y los
+			Lineamientos de Protección de Datos Personales publicados en el
+			Diario Oficial de la Federación el 30 de septiembre de 2005.</p>
+		<p>Para las finalidades antes mencionadas, se solicitan los
+			siguientes datos personales: nombre, correo electrónico, teléfono de
+			contacto y Registro Federal de Causantes (RFC).</p>
+		<h4>USO DE FUNCIONES Y ARCHIVOS "COOKIES"</h4>
+		<p>El usuario que tenga acceso al Portal, acuerda recibir las
+			cookies transmitidas por los servidores del Gobierno Federal. Una
+			"Cookie" es un componente que almacena datos para asegurar la
+			confidencialidad de los datos que pasan por la red de internet, con
+			el fin de garantizar que la información no sea observada por otros
+			usuarios.</p>
+		<h4>CLAVE DE USUARIO Y CONTRASEÑA</h4>
+		<p>El usuario debe mantener la confidencialidad de su clave de
+			usuario y de su contraseña, es responsable del mal uso que se les dé,
+			así como del acceso a las páginas de terceros.</p>
+		<h4>ACTUALIZACIÓN DE LA INFORMACIÓN</h4>
+		<p>Una vez firmado electrónicamente e inscrito el acto en la base
+			de datos del Registro Público de Comercio, no podrá ser modificado.</p>
+		<p>Para los casos de error material y de concepto previstos en el
+			Código de Comercio, Reglamento del Registro Público de Comercio y
+			Lineamientos para la Operación del Registro Público de Comercio, el
+			proceso de rectificación se realizará a mediante el uso de la forma
+			precodificada que determine la Secretaría de Economía para tal
+			efecto, la que pasará a formar parte del folio mercantil electrónico
+			correspondiente, a fin de tener por rectificado el error del que se
+			trate.</p>
+		<h4>TÉRMINOS DE USO ADICIONALES</h4>
+		<p>La información, datos, manifestaciones, actos y hechos
+			jurídicos que se deriven por el uso de este Portal, estarán sujetos a
+			la legislación que resulte aplicable, en relación a cada trámite que
+			se realice.</p>
+		<h4>VALIDEZ JURÍDICA</h4>
+		<p>Tendrán plena validez jurídica las resoluciones, notificaciones
+			y cualquier acto que la Secretaría de Economía lleve a cabo a través
+			del Portal, así como otras resoluciones que se emitan por ésta u otra
+			dependencia a través del Portal. Lo anterior en términos del Artículo
+			35, Fracción II de la Ley Federal de Procedimiento Administrativo,
+			20, 21 bis, 30, 30 bis y 30 bis 1 del Código de Comercio, y 34 de la
+			Ley Orgánica de la Administración Pública Federal, así como en
+			términos de lo dispuesto por el Reglamento del Registro Público de
+			Comercio y los Lineamientos para la Operación del Registro Público de
+			Comercio.</p>
+		<h4>MODIFICACIONES</h4>
+		<p>El Gobierno Federal tendrá el derecho de modificar en cualquier
+			momento el contenido y alcance de los presentes Términos y
+			Condiciones de Uso lo cual se hará del conocimiento del usuario de
+			manera oportuna, por lo cual deberá leerlos atentamente cada vez que
+			se le haga de conocimiento y pretenda utilizar el Portal.</p>
+		<h4>LEYES APLICABLES Y JURISDICCIÓN EN CASO DE CONTROVERSIA</h4>
+		<p>En caso de controversia derivada de la interpretación o
+			cumplimiento de los presentes Términos y Condiciones de Uso, de las
+			Políticas de Privacidad o de cualquier otro documento relevante del
+			Portal, el usuario está de acuerdo en que serán aplicables las leyes
+			federales de los Estados Unidos Mexicanos y competentes los
+			tribunales de la Ciudad de México, Distrito Federal, renunciando
+			expresamente a cualquier otro fuero o jurisdicción que pudiera
+			corresponderle en razón de su domicilio presente o futuro.</p></div></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div></div><div id="j_idt569" class="ui-dialog ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow ui-draggable ui-resizable" role="dialog" aria-labelledby="j_idt569_title" aria-hidden="true" style="width: 550px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt569_title" class="ui-dialog-title">Aviso de privacidad</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content" style="height: auto;">esta es la información del aviso de privacidad</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000;"></div></div><span id="spinnerBox" style="display: none;"><img id="j_idt38" src="/siger2/javax.faces.resource/img/preloader.gif.xhtml" alt="" style="border-radius: 6px; background-color: rgba(250,250,250,0.9); padding: 6px;"></span></body></html>

@@ -1,0 +1,91 @@
+﻿@inherits ContractViewBase
+
+
+@if (ShowDialog)
+{
+    <div class="modal fade show d-block" id="contract_modal" tabindex="-1" role="dialog" style="overflow-y: auto;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titleLabel">Agregar Relación</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @onclick="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Dependencia </label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.Organization.OrganizationName</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Proveedor</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.Contractor.OfficialName</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0"># Contrato</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.Number</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Concepto</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.Concept</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Monto</label>
+                                <label type="text" class="form-control-plaintext pt-0">@string.Format("{0:C}", Contract.Value) @Contract.Currency</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Tipo de Procedimiento</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.ContractType</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0"># de Procedimiento</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.Bidding</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Fecha Inicial</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.StartDate</label>                                
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Fecha Final</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.EndDate</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">Tipo de Contrato</label>
+                                <label type="text" class="form-control-plaintext pt-0">@Contract.ContractObjectType</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="col-form-label font-weight-bold pb-0">URL</label><br />
+                                <a href="@Contract.Url" target="_blank" class="font-weight-bold pt-0">Ir al enlace</a>
+                            </div>
+                        </div>
+           
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

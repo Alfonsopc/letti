@@ -1,0 +1,110 @@
+﻿@inherits CaseToReviewBase
+<h2>Caso # @CaseToReview.Id</h2>
+<div>
+    <div class="col-xs-12 col-sm-8">
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Creación del caso </label>
+            <div class="col-sm-8">
+                <label type="text" class="form-control-plaintext">@CaseToReview.CaseDate.ToLongDateString()</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Dependencia </label>
+            <div class="col-sm-8">
+                <label type="text" class="form-control-plaintext">@CaseToReview.Organization.OrganizationName</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Sospecha</label>
+            <div class="col-sm-8">
+                <label type="text" class="form-control-plaintext">@CaseType</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Proveedor</label>
+            <div class="col-sm-8">
+                <label type="text" class="form-control-plaintext">@CaseToReview.Contractor.ComercialName</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label">RFC</label>
+            <div class="col-sm-8">
+                <label type="text" class="form-control-plaintext">@CaseToReview.Contractor.TaxId;</label>
+            </div>
+        </div>
+        @if (CaseToReview.CaseType == Model.Enums.CaseType.RecentCreation)
+        {
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Fundado en</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@CaseToReview.Contractor.FoundedOn.ToLongDateString();</label>
+                </div>
+            </div>
+        }
+        @if (CaseToReview.CaseType == Model.Enums.CaseType.Address)
+        {
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Dirección</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@CaseToReview.Contractor.FiscalAddress;</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <h4>Proveedores Relacionados</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Comercial</th>
+                            <th>RFC</th>
+                            <th>Fundado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var contractor in CaseToReview.Contractors)
+                        {
+                            <tr>
+                                <td>@contractor.ComercialName</td>
+                                <td>@contractor.TaxId</td>
+                                <td>@contractor.FoundedOn.ToLongDateString()</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                
+
+            </div>
+        }
+        @if (CaseToReview.CaseType == Model.Enums.CaseType.Conflict)
+        {
+            <div class="form-group row">
+                <h4>Relaciones</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Funcionario</th>
+                            <th>Puesto</th>
+                            <th>Relación</th>
+                            <th>Proveedor</th>
+                            <th>Puesto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var relationship in CaseToReview.SuspiciousRelationships)
+                        {
+                        <tr>
+                            <td>@relationship.OrganizationPoi.FullName</td>
+                            <td>@relationship.Job</td>
+                            <td>@relationship.Relationship</td>
+                            <td>@relationship.ContractorPoi.FullName</td>
+                            <td>@relationship.Position</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+               
+
+            </div>
+        }
+    </div>
+</div>
+

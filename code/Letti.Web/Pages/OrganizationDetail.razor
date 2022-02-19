@@ -1,0 +1,163 @@
+﻿@page "/organizationdetail/{organizationId}"
+@inherits OrganizationDetailBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="organizations">Dependencias</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detalle</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h3>@Organization.OrganizationName</h3>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <label class="col-3 col-lg-1 pr-0 col-form-label font-weight-bold">Nivel</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Organization.OrganizationType</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-lg-1 pr-0 col-form-label font-weight-bold">Ciudad</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Organization.City</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-lg-1 pr-0 col-form-label font-weight-bold">Estado</label>
+                    <div class="col">
+                        <label type="text" class="form-control-plaintext">@Organization.State</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="mt-4">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a onclick="tabChange(this)" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" data-target="nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Empleados</a>
+        <a onclick="tabChange(this)" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" data-target="nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Proveedores</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-12 form-inline">
+                        <h3 class="m-0">Empleados</h3>
+                        <AuthorizeView>
+                            <Authorized>
+                                <div class="section-commands ml-4">
+                                    <button @onclick="QuickAddRelationship" class="btn btn-purple btn-sm font-weight-bold ml-1">Agregar empleado</button>
+                                </div>
+                            </Authorized>
+                        </AuthorizeView>
+                    </div>
+
+                    <Letti.Web.Components.AddPublicEmployeeModal @ref="AddPublicEmployeeDialog" OrganizationId="@Organization.Id" CloseEventCallback="@AddRelationshipDialog_OnDialogClose"></Letti.Web.Components.AddPublicEmployeeModal>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="d-flex">
+                            <th class="col-3">Nombre</th>
+                            <th class="col-3">Puesto</th>
+                            <th class="col-3">Inicio</th>
+                            <th class="col-3">Fin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var relationship in OrganizationRelationships)
+                        {
+                            <tr class="d-flex">
+                                <td class="col-3">@relationship.PersonOfInterest.FullName</td>
+                                <td class="col-3">@relationship.Job</td>
+                                <td class="col-3">@relationship.StartDate</td>
+                                <td class="col-3">@relationship.EndDate</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="card my-4">
+            <div class="card-body">
+                <h3>Proveedores Principales</h3>
+                <EditForm Model="@ReportParameters">
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-4 col-lg-3">
+                            <label class="w-100 font-weight-bold">
+                                Fecha Inicial:
+                                <InputDate @bind-Value="@ReportParameters.ContractsInitialDate" @onchange="PeriodChanged" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-12 col-sm-4 col-lg-3 my-2 my-sm-0">
+                            <label class="w-100 font-weight-bold">
+                                Fecha Final:
+                                <InputDate @bind-Value="@ReportParameters.ContractsEndDate" @onchange="PeriodChanged" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-5 col-sm-4 col-lg-2 offset-7 offset-sm-0 mt-0 mt-sm-3 align-self-center">
+                            <button @onclick="PeriodChanged" class="btn btn-purple btn-block float-right font-weight-bold">Buscar</button>
+                        </div>
+                    </div>
+                </EditForm>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="d-flex">
+                                <th class="col-4">Proveedor</th>
+                                <th class="col-3">RFC</th>
+                                <th class="col-2">Contratos</th>
+                                <th class="col-2">Valor Total</th>
+                                <th class="col-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var contract in ContractsViews)
+                            {
+                                <tr class="d-flex">
+                                    <td class="col-4">@contract.Contractor</td>
+                                    <td class="col-3">@contract.TaxId</td>
+                                    <td class="col-2">@contract.Contracts</td>
+                                    <td class="col-2">@string.Format("{0:C}", contract.Value)</td>
+                                    <td class="col-1 text-center">
+                                        <a href="@($"organizationcontractordetail/{OrganizationId}_{contract.ContractorId.ToString()}")">
+                                            <span class="fa fa-info-circle text-secondary"></span>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div>
+    @foreach (var suspectcase in Cases)
+    {
+        <Letti.Web.Components.CaseToReview CaseToReview=@suspectcase /><br />
+    }
+</div>

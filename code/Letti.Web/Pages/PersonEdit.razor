@@ -1,0 +1,73 @@
+﻿@page "/personedit"
+@page "/personedit/{PersonId}"
+@inherits PersonEditBase
+
+<div class="row pl-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="persons">Personas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar</li>
+        </ol>
+    </nav>
+</div>
+
+<section>
+    @if (!Saved)
+    {
+        <div class="alert @StatusClass">@Message</div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmit">
+                            <h3 class="page-title">@Person.FirstName</h3>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Apellido Paterno: </label>
+                                        <InputText id="lastName" @bind-Value="@Person.LastName" class="form-control" placeholder="Apellido paterno"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Apellido Materno: </label>
+                                        <InputText id="lastName" @bind-Value="@Person.SecondLastName" class="form-control" placeholder="Apellido materno"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="lastName" class="font-weight-bold">Nombre: </label>
+                                        <InputText id="lastName" @bind-Value="@Person.FirstName" class="form-control" placeholder="Nombre(s)"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="rfc" class="font-weight-bold">RFC: </label>
+                                        <InputText id="rfc" @bind-Value="@Person.RFC" class="form-control" placeholder="RFC"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="curp" class="font-weight-bold">CURP: </label>
+                                        <InputText id="curp" @bind-Value="@Person.CURP" class="form-control" placeholder="CURP"></InputText>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-4 offset-6 offset-sm-0 align-self-center">
+                                    <button type="submit" class="btn btn-purple edit-btn float-right font-weight-bold btn-block mt-3">Guardar Persona</button>
+                                </div>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert @StatusClass">@Message</div>
+        <a class="btn btn-secondary text-white font-weight-bold" @onclick="@NavigateToOverview">Regresar a la lista</a>
+
+    }
+</section>
