@@ -16,10 +16,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Ayuntamiento de Ensenada.xml">
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\3.1.0\ref\netcoreapp3.1\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\3.1.0\ref\netcoreapp3.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Definitions\Administradora de la Vía Corta Tijuana-Tecate.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Ayuntamiento de Tijuana.xml">
+    <None Update="Definitions\Ayuntamiento de Ensenada.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Definitions\Ayuntamiento de Tijuana.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Columns>
+<ColumnName>
+  <PropertyName>Adjudicado</PropertyName>
+  <FilePropertyName>Nombre(s) Del Contratista O Proveedor</FilePropertyName> 
+</ColumnName>
+  <ColumnName>
+   <PropertyName>Address</PropertyName>
+   <FilePropertyName>DOMICILIO FISCAL DE LA EMPRESA  CONTRATISTA O PROVEEDOR TIPO DE VIALIDAD (CATÁLOGO)</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Bidding</PropertyName>
+   <FilePropertyName>NÚMERO DE EXPEDIENTE  FOLIO O NOMENCLATURA</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Object Type</PropertyName>
+   <FilePropertyName>Materia O Tipo de Contratación (catálogo)</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Contract Type</PropertyName>
+   <FilePropertyName>Tipo de Procedimiento (catálogo)</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Contract Concept</PropertyName>
+   <FilePropertyName>DESCRIPCIÓN DE LAS OBRAS  BIENES O SERVICIOS</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Contract Object</PropertyName>
+   <FilePropertyName>Objeto Del Contrato</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Url</PropertyName>
+   <FilePropertyName>HIPERVÍNCULO AL DOCUMENTO DEL CONTRATO Y ANEXOS  EN VERSIÓN PÚBLICA  EN SU CASO</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Contract Number</PropertyName>
+   <FilePropertyName>Número Que Identifique Al Contrato</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Value</PropertyName>
+   <FilePropertyName>Monto Total Del Contrato con Impuestos Incluidos (mxn)</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Value</PropertyName>
+   <FilePropertyName>Monto Total Del Contrato con Impuestos Incluidos (mxn)</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Currency</PropertyName>
+   <FilePropertyName>Tipo de Moneda</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Currency</PropertyName>
+   <FilePropertyName>Tipo de Moneda</FilePropertyName>  
+  </ColumnName>
+  <ColumnName>
+   <PropertyName>Date</PropertyName>
+   <FilePropertyName>Fecha de Inicio de La Vigencia Del Contrato (día/mes/año)</FilePropertyName>  
+  </ColumnName>
+</Columns>

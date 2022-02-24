@@ -1549,11 +1549,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.BrowserScrapper\\Letti.Scrapper.csproj",
+      "projectUniqueName": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.BrowserScrapper\\Letti.Scrapper.csproj",
       "projectName": "Letti.Scrapper",
-      "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.BrowserScrapper\\Letti.Scrapper.csproj",
+      "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.BrowserScrapper\\Letti.Scrapper.csproj",
       "packagesPath": "C:\\Users\\alfon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.BrowserScrapper\\obj.netcore\\",
+      "outputPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.BrowserScrapper\\obj.netcore\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -1580,28 +1580,28 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj"
             },
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Model\\Letti.Model.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Model\\Letti.Model.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Model\\Letti.Model.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Model\\Letti.Model.csproj"
             },
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj"
             }
           }
         },
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Algorithms\\Letti.Algorithms.csproj"
             },
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Model\\Letti.Model.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.Model\\Letti.Model.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Model\\Letti.Model.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.Model\\Letti.Model.csproj"
             },
-            "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj": {
-              "projectPath": "C:\\Users\\alfon\\Source\\Repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj"
+            "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj": {
+              "projectPath": "C:\\Users\\alfon\\source\\repos\\letti\\code\\Letti.ServiceProxies\\Letti.ServiceProxies.csproj"
             }
           }
         }
