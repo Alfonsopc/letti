@@ -25,13 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Definitions\Administradora de la Vía Corta Tijuana-Tecate.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Definitions\Ayuntamiento de Ensenada.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Definitions\Ayuntamiento de Tijuana.xml">
+    <None Update="Definitions\Template.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

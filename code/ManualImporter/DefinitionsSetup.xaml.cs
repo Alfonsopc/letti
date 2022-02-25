@@ -50,30 +50,24 @@ namespace ManualImporter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            fileDefinitionReader.Load(fileAnalysis.FileName);
+            fileDefinitionReader.Load(fileAnalysis.FileName);            
             foreach(var definitionColumn in fileDefinitionReader.Columns)
             {
-                Columns.Add(definitionColumn);
+                //ColumnName errorColumn=fileAnalysis.Columns.FirstOrDefault(c => c.PropertyName == definitionColumn.PropertyName);
+                if (!fileAnalysis.Columns.Any(c => c.PropertyName == definitionColumn.PropertyName))
+                {
+                    Columns.Add(definitionColumn);
+                }
+                else
+                {
+                    DefinitionColumns.Add(definitionColumn);
+                    var toremove = DataColumns.FirstOrDefault(c => c == definitionColumn.FilePropertyName);
+                    DataColumns.Remove(toremove);
+                }
+                
+               
             }
             
-            //vacía las columnas en las que se encontraron diferencias
-            foreach(var column in fileAnalysis.Columns)
-            {
-                ColumnName columnToClear=Columns.FirstOrDefault(c => c.PropertyName == column.PropertyName);
-                if(columnToClear!=null)
-                {
-                    columnToClear.FilePropertyName = string.Empty;
-                }
-            }
-            //remueve de las opciones las columnas que sí se encontraron
-            var validColumns = Columns.Where(c => !string.IsNullOrEmpty(c.FilePropertyName));
-           
-            foreach(ColumnName column in validColumns)
-            {
-                var toremove=DataColumns.FirstOrDefault(c => c == column.FilePropertyName);
-                DataColumns.Remove(toremove);
-                DefinitionColumns.Add(column);
-            }
             ColumnsView.ItemsSource = Columns;
             DataColumnsView.ItemsSource = DataColumns;
         }

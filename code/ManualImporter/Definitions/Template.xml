@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Columns>
 <ColumnName>
   <PropertyName>Adjudicado</PropertyName>
-  <FilePropertyName>Nombre(s) Del Adjudicado</FilePropertyName> 
+  <FilePropertyName>Nombre(s) Del Contratista O Proveedor</FilePropertyName> 
 </ColumnName>
   <ColumnName>
    <PropertyName>Address</PropertyName>
-   <FilePropertyName>Domicilio Fiscal de La Empresa, Contratista O Proveedor Tipo de Vialidad (catálogo)</FilePropertyName>  
+   <FilePropertyName>DOMICILIO FISCAL DE LA EMPRESA  CONTRATISTA O PROVEEDOR TIPO DE VIALIDAD (CATÁLOGO)</FilePropertyName>  
   </ColumnName>
   <ColumnName>
    <PropertyName>Bidding</PropertyName>
-   <FilePropertyName>Número de Expediente, Folio O Nomenclatura</FilePropertyName>  
+   <FilePropertyName>NÚMERO DE EXPEDIENTE  FOLIO O NOMENCLATURA</FilePropertyName>  
   </ColumnName>
   <ColumnName>
    <PropertyName>Object Type</PropertyName>
@@ -22,7 +22,7 @@
   </ColumnName>
   <ColumnName>
    <PropertyName>Contract Concept</PropertyName>
-   <FilePropertyName>Descripción de Las Obras, Bienes O Servicios</FilePropertyName>  
+   <FilePropertyName>DESCRIPCIÓN DE LAS OBRAS  BIENES O SERVICIOS</FilePropertyName>  
   </ColumnName>
   <ColumnName>
    <PropertyName>Contract Object</PropertyName>
@@ -30,7 +30,7 @@
   </ColumnName>
   <ColumnName>
    <PropertyName>Url</PropertyName>
-   <FilePropertyName>Hipervínculo Al Documento Del Contrato Y Anexos, en Versión Pública, en su Caso</FilePropertyName>  
+   <FilePropertyName>HIPERVÍNCULO AL DOCUMENTO DEL CONTRATO Y ANEXOS  EN VERSIÓN PÚBLICA  EN SU CASO</FilePropertyName>  
   </ColumnName>
   <ColumnName>
    <PropertyName>Contract Number</PropertyName>
@@ -42,7 +42,7 @@
   </ColumnName>
   <ColumnName>
    <PropertyName>Currency</PropertyName>
-   <FilePropertyName>Tipo de Moneda</FilePropertyName>  
+   <FilePropertyName>TIPO DE MONEDA</FilePropertyName>  
   </ColumnName>
   <ColumnName>
    <PropertyName>Date</PropertyName>

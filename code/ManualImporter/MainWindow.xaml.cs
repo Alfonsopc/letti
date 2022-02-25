@@ -144,39 +144,33 @@ namespace ManualImporter
                     //definition files
                     string definitionsDirectory =$"{Directory.GetCurrentDirectory()}\\definitions";
                     string[] dirs = Directory.GetFiles(definitionsDirectory, "*.xml");
-                    bool found = false;
                     foreach (string definitionFile in dirs)
                     {
                         string definitions = definitionFile.Replace(".xml", "");
                         FileDefinitionReader definitionReader = new FileDefinitionReader();
                         definitionReader.Load(definitions);
                         FileAnalysis changes = DefinitionMatch(contractsParser, definitionReader);
-                        if (changes.Errors == 0)
-                        {
-                            found = true;
-                            //es una nueva dependencia hay que copiar archivo de definiciones
-                            if(contractsParser.Organization!=changes.Organization)
-                            {
-                                string destFile = System.IO.Path.Combine(definitionsDirectory, $"{contractsParser.Organization}.xml");
-                                System.IO.File.Copy(definitionFile, destFile, true);
-                                MessageBox.Show($"Match: {contractsParser.Organization} and {changes.Organization}");
-                            }
-                            //mover el data file to ready
-                            filesToMove.Add(dataFile);
-                            
-                           
-                            break;
-                        }
-                        else
-                        {
-                            listOfFiles.Add(changes);
-                        }
+                        listOfFiles.Add(changes);                  
                     }
-                    if (!found)
+
+                    //primero checamos que no exista ya un archivo para esta organización
+                    if(listOfFiles.Where(c=>c.FileOrganization==c.Organization).Any())
+                    {
+                        //nothing else to do but to mark the data file to move
+                        filesToMove.Add(dataFile);
+                    }
+                    else
                     {
                         FileAnalysis betterFile = listOfFiles.OrderBy(c => c.Errors).First();
-                        string organizationFile=Path.GetFileNameWithoutExtension(betterFile.FileName);
-                        if(organizationFile!=betterFile.Organization)
+                        if(betterFile.Errors==0)
+                        {
+                            //es una nueva dependencia hay que copiar el archivo
+                            string destFile = System.IO.Path.Combine(definitionsDirectory, $"{contractsParser.Organization}.xml");
+                            System.IO.File.Copy(betterFile.FileName, destFile, true);
+                            filesToMove.Add(dataFile);
+                            MessageBox.Show($"Match: {contractsParser.Organization} and {betterFile.FileOrganization}");               
+                        }
+                        else
                         {
                             DefinitionsSetup definitionsSetup = new DefinitionsSetup(betterFile, contractsParser.Columns);
                             definitionsSetup.ShowDialog();
@@ -185,21 +179,13 @@ namespace ManualImporter
                                 filesToMove.Add(dataFile);
                             }
                         }
-                        else
-                        {
-                            filesToMove.Add(dataFile);
-                        }
-                        
-                        //WriteToXmlFile<FileAnalysis>($"c:\\temp\\letti\\{contractsParser.Organization}.xml", betterFile);
-                        //MessageBox.Show("Best Match:" + betterFile.FileName);
-                    }
+                    }                                      
                 }
 
             }
            
             MessageBox.Show("Done");
             
-
         }
         private void Move_Click(object sender, RoutedEventArgs e)
         {
