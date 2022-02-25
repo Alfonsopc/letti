@@ -37,12 +37,14 @@ namespace ManualImporter
             FileSaved = false;
             Columns = new ObservableCollection<ColumnName>();
             fileDefinitionReader = new FileDefinitionReader();
+            DefinitionColumns = new List<ColumnName>();
             this.fileAnalysis = fileAnalysis;
             this.DataColumns = new ObservableCollection<string>();
             foreach(var  headers in dataColumns)
             {
                 this.DataColumns.Add(headers.Value);
             }
+            OrganizationName.Text = fileAnalysis.Organization;
            
         }
 
@@ -94,12 +96,25 @@ namespace ManualImporter
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+            if(Columns.Any())
+            {
+                MessageBox.Show("Necesitas relacionar todas las propiedades");
+                return;
+            }
             FileSaved = true;
             FileDefinitionReader fileDefinitionReader = new FileDefinitionReader();
             fileDefinitionReader.Columns.AddRange(DefinitionColumns);
             string definitionsFile = $"{Directory.GetCurrentDirectory()}\\definitions\\{fileAnalysis.Organization}.xml";
             fileDefinitionReader.WriteToXmlFile(definitionsFile);
             Close();
+        }
+
+        private void BindIgnore_Click(object sender, RoutedEventArgs e)
+        {
+            ColumnName selectedDest = ColumnsView.SelectedItem as ColumnName;           
+            selectedDest.FilePropertyName = "Ignorar";
+            Columns.Remove(selectedDest);
+            DefinitionColumns.Add(selectedDest);
         }
     }
 }

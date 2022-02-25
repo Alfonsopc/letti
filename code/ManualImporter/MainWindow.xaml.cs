@@ -5,6 +5,7 @@ using ManualImporter.Helpers;
 using ManualImporter.Parser;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
@@ -20,6 +21,8 @@ namespace ManualImporter
     public partial class MainWindow : Window
     {
         private ContractController controller;
+        private List<string> filesToMove = new List<string>();
+        private string targetPath = string.Empty;
         public MainWindow()
         {
           
@@ -70,6 +73,7 @@ namespace ManualImporter
 
         private async void Transparencia_Click(object sender, RoutedEventArgs e)
         {
+           
             var ofd = new Microsoft.Win32.OpenFileDialog() { Filter = "XLSX Files (*.xlsx)|*.xlsx|XLS files (*.xls)|*.xls" };
             var result = ofd.ShowDialog();
             if (result.Value)
@@ -111,9 +115,10 @@ namespace ManualImporter
 
         private void Transparencia_Setup_Click(object sender, RoutedEventArgs e)
         {
-          
+            filesToMove.Clear();
+            targetPath = string.Empty;
             List<FileAnalysis> listOfFiles = new List<FileAnalysis>();
-            List<string> filesToMove = new List<string>();
+           
             var dialog = new System.Windows.Forms.FolderBrowserDialog
             {
                 Description = "Time to select a folder",
@@ -121,8 +126,7 @@ namespace ManualImporter
                 SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
         + Path.DirectorySeparatorChar,
                 ShowNewFolderButton = true
-            };
-            string targetPath = string.Empty;
+            };        
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string filesPath = dialog.SelectedPath;
@@ -151,15 +155,16 @@ namespace ManualImporter
                         {
                             found = true;
                             //es una nueva dependencia hay que copiar archivo de definiciones
-                            if(contractsParser.Organization!=definitions)
+                            if(contractsParser.Organization!=changes.Organization)
                             {
                                 string destFile = System.IO.Path.Combine(definitionsDirectory, $"{contractsParser.Organization}.xml");
                                 System.IO.File.Copy(definitionFile, destFile, true);
+                                MessageBox.Show($"Match: {contractsParser.Organization} and {changes.Organization}");
                             }
                             //mover el data file to ready
                             filesToMove.Add(dataFile);
                             
-                            MessageBox.Show("Match:" + definitionFile);
+                           
                             break;
                         }
                         else
@@ -170,26 +175,48 @@ namespace ManualImporter
                     if (!found)
                     {
                         FileAnalysis betterFile = listOfFiles.OrderBy(c => c.Errors).First();
-                        DefinitionsSetup definitionsSetup = new DefinitionsSetup(betterFile,contractsParser.Columns);
-                        definitionsSetup.ShowDialog();
-                        if(definitionsSetup.FileSaved)
+                        string organizationFile=Path.GetFileNameWithoutExtension(betterFile.FileName);
+                        if(organizationFile!=betterFile.Organization)
+                        {
+                            DefinitionsSetup definitionsSetup = new DefinitionsSetup(betterFile, contractsParser.Columns);
+                            definitionsSetup.ShowDialog();
+                            if (definitionsSetup.FileSaved)
+                            {
+                                filesToMove.Add(dataFile);
+                            }
+                        }
+                        else
                         {
                             filesToMove.Add(dataFile);
                         }
+                        
                         //WriteToXmlFile<FileAnalysis>($"c:\\temp\\letti\\{contractsParser.Organization}.xml", betterFile);
                         //MessageBox.Show("Best Match:" + betterFile.FileName);
                     }
                 }
 
             }
-            foreach(string filetoMove in filesToMove)
+           
+            MessageBox.Show("Done");
+            
+
+        }
+        private void Move_Click(object sender, RoutedEventArgs e)
+        {
+            int filecount = 0;
+            foreach (string filetoMove in filesToMove)
             {
                 string fileName = Path.GetFileName(filetoMove);
                 string destinationFile = $"{targetPath}\\{fileName}";
-                System.IO.File.Move(filetoMove, destinationFile);
+                try
+                {
+                    System.IO.File.Move(filetoMove, destinationFile);
+                }
+                catch (Exception exp)
+                {
+                    filecount++;
+                }
             }
-            
-
         }
         private FileAnalysis DefinitionMatch(TransparenciaParser parser,FileDefinitionReader definitionReader)
         {
@@ -226,5 +253,7 @@ namespace ManualImporter
                     writer.Close();
             }
         }
+
+       
     }
 }

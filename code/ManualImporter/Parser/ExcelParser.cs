@@ -123,6 +123,7 @@ namespace ManualImporter.Parser
             }
                          
             loaded = true;
+            document.Close();
         }
         private void Load(string initializer)
         {
@@ -151,6 +152,7 @@ namespace ManualImporter.Parser
             }
 
             loaded = true;
+            document.Close();
         }
 
         public void Dispose()

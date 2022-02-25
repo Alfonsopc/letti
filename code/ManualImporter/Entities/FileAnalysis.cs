@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ManualImporter.Entities
 {
@@ -10,5 +8,6 @@ namespace ManualImporter.Entities
         public string Organization { get; set; }
         public string FileName { get; set; }
         public List<ColumnName> Columns { get; set; } = new List<ColumnName>();
+        
     }
 }

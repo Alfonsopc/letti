@@ -28,10 +28,14 @@ namespace ManualImporter.Helpers
             XDocument document = XDocument.Load(FileName);
             var found = document.XPathEvaluate("/Columns/ColumnName") as IEnumerable<object>;
 
-            if (found == null)
+            if (!found.Any())
             {
-                MessageBox.Show("No se encontraron aplicaciones");
-                return;
+                found = document.XPathEvaluate("ColumnsList/Columns/ColumnName") as IEnumerable<object>;
+                if (!found.Any())
+                {
+                    MessageBox.Show("No se encontraron aplicaciones");
+                    return;
+                }      
             }
             foreach (XElement node in found)
             {
@@ -52,9 +56,11 @@ namespace ManualImporter.Helpers
             TextWriter writer = null;
             try
             {
-                var serializer = new XmlSerializer(typeof(List<ColumnName>));
+                ColumnsList columnsToSerialize = new ColumnsList();
+                columnsToSerialize.Columns.AddRange(this.Columns);
+                var serializer = new XmlSerializer(typeof(ColumnsList));
                 writer = new StreamWriter(filePath, false);
-                serializer.Serialize(writer, Columns);
+                serializer.Serialize(writer, columnsToSerialize);
             }
             finally
             {

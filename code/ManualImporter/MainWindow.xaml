@@ -17,7 +17,11 @@
         </Grid.RowDefinitions>
         <Button Grid.Column="0" Width="160" Height="35" Content="Transparencia" Click="Transparencia_Click"/>
         <Button Grid.Column="1" Width="160" Height="35" Content="Compranet" Click="Compranet_Click"/>
-        <Button Grid.Column="0" Grid.Row="1" Width="160" Height="35" Content="Transparencia Setup" Click="Transparencia_Setup_Click"/>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+            <Button  Width="160" Height="35" Margin="5" Content="Transparencia Setup" Click="Transparencia_Setup_Click"/>
+            <Button Click="Move_Click" Content="Mover Archivos" Width="160" Height="35" Margin="5"/>
+        </StackPanel>
+       
 
     </Grid>
 </Window>

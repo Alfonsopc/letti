@@ -41,14 +41,6 @@
    <FilePropertyName>Monto Total Del Contrato con Impuestos Incluidos (mxn)</FilePropertyName>  
   </ColumnName>
   <ColumnName>
-   <PropertyName>Value</PropertyName>
-   <FilePropertyName>Monto Total Del Contrato con Impuestos Incluidos (mxn)</FilePropertyName>  
-  </ColumnName>
-  <ColumnName>
-   <PropertyName>Currency</PropertyName>
-   <FilePropertyName>Tipo de Moneda</FilePropertyName>  
-  </ColumnName>
-  <ColumnName>
    <PropertyName>Currency</PropertyName>
    <FilePropertyName>Tipo de Moneda</FilePropertyName>  
   </ColumnName>
