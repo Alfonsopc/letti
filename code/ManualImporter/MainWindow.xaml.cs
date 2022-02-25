@@ -144,6 +144,7 @@ namespace ManualImporter
                     //definition files
                     string definitionsDirectory =$"{Directory.GetCurrentDirectory()}\\definitions";
                     string[] dirs = Directory.GetFiles(definitionsDirectory, "*.xml");
+                    listOfFiles.Clear();
                     foreach (string definitionFile in dirs)
                     {
                         string definitions = definitionFile.Replace(".xml", "");
@@ -212,8 +213,8 @@ namespace ManualImporter
             fileAnalysis.Organization = parser.Organization;
             foreach(ColumnName column in definitionReader.Columns)
             {
-                string columnName = column.FilePropertyName.ToUpper();
-                var foundColumn = parser.Columns.Where(c => c.Value.ToUpper() == columnName).Any();
+                string columnName = column.FilePropertyName;
+                var foundColumn = parser.Columns.Where(c => c.Value == columnName).Any();
                 if(!foundColumn)
                 {
                     fileAnalysis.Errors++;

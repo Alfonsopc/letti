@@ -56,13 +56,13 @@ namespace ManualImporter
                 //ColumnName errorColumn=fileAnalysis.Columns.FirstOrDefault(c => c.PropertyName == definitionColumn.PropertyName);
                 if (!fileAnalysis.Columns.Any(c => c.PropertyName == definitionColumn.PropertyName))
                 {
-                    Columns.Add(definitionColumn);
-                }
-                else
-                {
                     DefinitionColumns.Add(definitionColumn);
                     var toremove = DataColumns.FirstOrDefault(c => c == definitionColumn.FilePropertyName);
                     DataColumns.Remove(toremove);
+                }
+                else
+                {                 
+                    Columns.Add(definitionColumn);
                 }
                 
                
